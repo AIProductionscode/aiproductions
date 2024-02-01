@@ -1,0 +1,453 @@
+:root {
+  --heading: Typographica;
+  --prycol: #f9d801;
+  --grey-col: #181818;
+  --subheading: Nexa;
+  --paragraph: Nexa;
+}
+
+.web-content {
+  display: none;
+}
+
+@font-face {
+  font-family: Typographica;
+  src: url(fonts/TypoGraphica.otf);
+}
+@font-face {
+  font-family: Nexa;
+  src: url(fonts/NexaRegular.otf);
+}
+
+:root::-webkit-scrollbar {
+  border: none;
+  width: 7px;
+  height: 7px;
+}
+
+:root::-webkit-scrollbar-track {
+  background: #181818;
+}
+
+:root::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  background: var(--prycol);
+}
+
+:root::-webkit-scrollbar-thumb:hover {
+  color: #463d00;
+}
+
+:root::-webkit-scrollbar-button {
+  display: none;
+  
+}
+
+/* Glow Cursor */
+.glow-cursor {
+  position: fixed;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #f9d801;
+  filter: blur(150px);
+  mix-blend-mode: screen;
+  /* Glowing effect */
+  pointer-events: none;
+  /* Allow interaction with underlying elements */
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.368);
+}
+
+.logo {
+  height: 40px;
+}
+
+body {
+  /* overflow-x: hidden; */
+  background-image: url(assets/Background\ 2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90vh;
+  transition: all ease-in-out 0.3s;
+  cursor: url(assets/aicursor.png), auto;
+  background-color: var(--prycol);
+}
+
+a.nav-link {
+  color: var(--prycol);
+  font-size: 14px;
+  display: inline-block;
+  position: relative;
+  transition: ease-in-out 0.3s;
+  font-family: var(--paragraph);
+  cursor:  url(assets/aicursor.png), pointer;
+}
+
+a.nav-link:hover {
+  color: var(--prycol);
+
+}
+
+a.nav-link:active {
+  color: #b19a00;
+}
+
+a.nav-link:focus {
+  color: var(--prycol);
+}
+
+a.nav-link::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 3px;
+  left: 50%;
+  position: absolute;
+  background: var(--prycol);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+a.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+a.nav-link:active::after {
+  width: 50%;
+  left: 0;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+}
+
+#spinner {
+  margin-top: 40vh;
+  align-self: center;
+  animation: spin 1s linear infinite;
+}
+
+.spinner-img {
+  height: 50px;
+  filter: drop-shadow(0px 0px 10px #f9d801);
+  /*blur() | brightness() | contrast() | grayscale() | hue-rotate() | invert() | opacity() | saturate() | sepia() | url(); */
+  animation: expand 2s ease-in-out infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+    transform-origin: center;
+  }
+}
+
+@keyframes expand {
+  0% {
+    transform: scale(1);
+    transform-origin: center;
+    filter: none;
+  }
+
+  50% {
+    transform: scale(1.4);
+    transform-origin: center;
+    filter: blur(2px);
+  }
+
+  100% {
+    transform: scale(1);
+    transform-origin: center;
+    filter: none;
+  }
+}
+
+.heading {
+  font-family: var(--heading);
+  font-size: 70px;
+  color: var(--prycol);
+  line-height: 50px;
+}
+
+.heading-dark {
+  font-family: var(--heading);
+  font-size: 70px;
+  color: var(--grey-col);
+}
+
+.sub-heading {
+  font-family: var(--subheading);
+  font-weight: bold;
+  color: white;
+  font-size: 21px;
+}
+.sub-heading-dark {
+  font-family: var(--subheading);
+  font-weight: bold;
+  color: var(--grey-col);
+  font-size: 21px;
+}
+
+.sub-title {
+  font-family: var(--heading);
+  font-size: 21px;
+  color: var(--prycol);
+}
+
+.sub-title-dark {
+  font-family: var(--heading);
+  font-size: 21px;
+}
+
+
+.paragraph {
+  font-family: var(--paragraph) thin;
+  color: white;
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.btn-pry {
+  font-family: var(--paragraph);
+  font-weight: 700;
+  text-decoration: none;
+  color: #181818;
+  background-color: var(--prycol);
+  animation: pulse 2s infinite;
+  animation-delay: 2s;
+  transition: all ease-in-out 0.4s;
+  cursor:  url(assets/aicursor.png), pointer;
+}
+
+.btn-pry:hover {
+  box-shadow: 0 0 20px #f9d80192;
+  animation: none;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 3px #f9d801b8;
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 23px #f9d80100;
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 #f9d80100;
+  }
+}
+
+.btn-pry:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 20px #f9d8013c;
+  animation: none;
+}
+
+
+
+.btn-sec {
+  position: relative;
+  font-weight: 700;
+  font-family: var(--paragraph);
+  color: var(--prycol);
+  box-sizing: border-box;
+  border: 1px var(--prycol) solid;
+  text-decoration: none;
+  overflow: hidden;
+  background: none;
+  z-index: 1;
+  transition: 0.4s ease-in-out;
+  cursor:  url(assets/aicursor.png), pointer;
+}
+
+.btn-sec:hover {
+  color: #181818;
+  box-shadow: 0 0 20px #f9d80192;
+  animation: none;
+}
+
+.btn-sec:before {
+  content: "";
+  position: absolute;
+  background: var(--prycol);
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  top: 0;
+  z-index: -1;
+  transition: right 0.4s ease-in-out;
+}
+
+.btn-sec:hover:before {
+  right: 0;
+}
+
+.tools-section {
+  background-color: var(--prycol);
+}
+
+.tools {
+  transition: all ease-in-out 0.3s;
+  cursor: url(assets/aicursordark.png), auto;
+}
+
+.tool-imgs {
+  height: 40px;
+  transition: all ease-in-out 0.5s;
+}
+.tool-imgs:hover {
+  transform: translateY(-4px);
+  transform: scale(1.1);
+}
+
+.dark-col {
+  color: #181818;
+}
+
+.toast, .toast-header {
+  background-color: #181818;
+}
+
+.project-section {
+  background-image: url(assets/Background\ 1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+
+.israel-img {
+  height: 500px;
+  transition: all ease-in-out 0.5s;
+  /* animation-delay: 2s; */
+}
+
+.israel-img:hover {
+  animation: glow 2s infinite;
+}
+
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0 0 5px #f9d8018b);
+  }
+
+  70% {
+    filter: drop-shadow(0 0 40px #f9d80100);
+  }
+
+  100% {
+    filter: drop-shadow( 0 0 0 0 #f9d80100);
+  }
+}
+
+.projects-completed {
+  background-color: var(--prycol);
+  transition: all ease-in-out 0.3s;
+  cursor: url(assets/aicursordark.png), auto;
+}
+
+.pComp {
+  scale: .98;
+  opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range-start: 10vh;
+  animation-range-end: 95vh ;
+}
+
+@keyframes fade-in {
+  
+to{scale: 1;  opacity: 1; }
+}
+
+.enquiry-form {
+  cursor: url(assets/aicursor.png), auto;
+  background-image: url(assets/Background\ 2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all ease-in-out 0.3s;
+  cursor: url(assets/aicursor.png), auto;
+}
+
+
+.form-card {
+  
+  background-color: rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
+  transition: all ease-in-out 0.2s;
+} 
+
+.form-card:hover {
+  box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.104);
+}
+.enq-form-name, .enq-form-email {
+  border: 1px solid white ;
+  width: 300px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.02);
+  /* border: 1px groove white; */
+  border-radius: 5px;
+  transition: all ease-in-out 0.3s;
+  color: white;
+}
+
+.enq-form-message {
+  border: 1px solid white ;
+  width: 45vw;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.02);
+  /* border: 1px groove white; */
+  border-radius: 5px;
+  transition: all ease-in-out 0.3s;
+  color: white;
+}
+
+.enq-form-name:hover, .enq-form-email:hover, .enq-form-message:hover {
+  box-shadow: 0 0 20px #f9d8013c;
+  color: #f9d801;
+}
+
+
+
+.enq-form-name:active, .enq-form-email:active, .enq-form-message:active {
+  box-shadow: 0 0 20px #f9d8013c;
+}
+
+.enq-form-name:focus-visible, .enq-form-email:focus-visible, .enq-form-message:focus-visible {
+  box-shadow: 0 0 20px #f9d8013c;
+}
+
+
+/* If the screen size is 1200px wide or more, set the font-size to 80px */
+@media (min-width: 1200px) {
+  .responsive-font-example {
+    font-size: 80px;
+  }
+}
+/* If the screen size is smaller than 1200px, set the font-size to 80px */
+@media (max-width: 1199.98px) {
+  .heading {
+    font-size: 50px;
+  }
+  .israel-img {
+    height: 350px;
+  }
+  body {
+    height: 150vh;
+  }
+}
+
