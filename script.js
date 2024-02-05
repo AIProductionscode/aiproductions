@@ -2,11 +2,45 @@
 $(document).ready(function () {
 
 
+//Navbar retract and expand
+window.onscroll = function() { scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    $("#navbar").fadeOut();
+   
+  } else {
+    $("#navbar").fadeIn();
+   }
+}
+
+
+  //Infinite Logo Scrolling
+  const scrollers = document.querySelectorAll(".scroller");
+
+  if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    addAnimation();
+  }
+
+  function addAnimation() {
+    scrollers.forEach(scroller => {
+      scroller.setAttribute("data-animated", true);
+      const scrollerInner = document.querySelector(".scroller-inner");
+      const scrollerContent =  Array.from(scrollerInner.children);
+
+      scrollerContent.forEach(item => {
+        const duplicatedItem = item.cloneNode(true);
+        duplicatedItem.setAttribute("aria-hidden", true);
+        scrollerInner.appendChild(duplicatedItem);
+      })
+
+    })
+  }
   
   //*Loading Animation
   $("#spinner").show();
   $(".web-content").hide();
-  $(".glow-cursor").fadeOut()
+  $(".glow-cursor").fadeOut();
   //Add a delay of 2000 milliseconds (2 seconds)
   setTimeout(function () {
     $(".web-content").show();

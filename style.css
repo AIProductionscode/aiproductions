@@ -60,12 +60,20 @@
 }
 
 .navbar {
-  background-color: rgba(0, 0, 0, 0.4);
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.368);
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  transition: all ease-in-out 0.3s;
+  z-index: 99;
+}
+
+.navbar:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
 }
 
 .logo {
-  height: 40px;
+  height: 35px;
 }
 
 body {
@@ -87,7 +95,7 @@ a.nav-link {
   position: relative;
   transition: ease-in-out 0.3s;
   font-family: var(--paragraph);
-  cursor:  url(assets/aicursor.png), pointer;
+  cursor:  url(assets/aicursor\ pointer.png), pointer;
 }
 
 a.nav-link:hover {
@@ -208,10 +216,16 @@ a.nav-link:active::after {
   font-size: 21px;
 }
 
-
 .paragraph {
   font-family: var(--paragraph) thin;
   color: white;
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.paragraph-dark {
+  font-family: var(--paragraph) thin;
+  color: var(--grey-col);
   font-size: 16px;
   font-weight: 200;
 }
@@ -225,7 +239,7 @@ a.nav-link:active::after {
   animation: pulse 2s infinite;
   animation-delay: 2s;
   transition: all ease-in-out 0.4s;
-  cursor:  url(assets/aicursor.png), pointer;
+  cursor:  url(assets/aicursor\ pointer.png), pointer;
 }
 
 .btn-pry:hover {
@@ -270,7 +284,7 @@ a.nav-link:active::after {
   background: none;
   z-index: 1;
   transition: 0.4s ease-in-out;
-  cursor:  url(assets/aicursor.png), pointer;
+  cursor:  url(assets/aicursor\ pointer.png), pointer;
 }
 
 .btn-sec:hover {
@@ -319,14 +333,6 @@ a.nav-link:active::after {
 
 .toast, .toast-header {
   background-color: #181818;
-}
-
-.project-section {
-  background-image: url(assets/Background\ 1.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  
 }
 
 .israel-img {
@@ -385,7 +391,6 @@ to{scale: 1;  opacity: 1; }
 
 
 .form-card {
-  
   background-color: rgba(255, 255, 255, 0.02);
   border-radius: 10px;
   transition: all ease-in-out 0.2s;
@@ -396,7 +401,7 @@ to{scale: 1;  opacity: 1; }
 }
 .enq-form-name, .enq-form-email {
   border: 1px solid white ;
-  width: 300px;
+  /* width: 300px; */
   height: 40px;
   background-color: rgba(255, 255, 255, 0.02);
   /* border: 1px groove white; */
@@ -407,8 +412,8 @@ to{scale: 1;  opacity: 1; }
 
 .enq-form-message {
   border: 1px solid white ;
-  width: 45vw;
-  height: 200px;
+  /* width: 45vw;
+  height: 200px; */
   background-color: rgba(255, 255, 255, 0.02);
   /* border: 1px groove white; */
   border-radius: 5px;
@@ -421,8 +426,6 @@ to{scale: 1;  opacity: 1; }
   color: #f9d801;
 }
 
-
-
 .enq-form-name:active, .enq-form-email:active, .enq-form-message:active {
   box-shadow: 0 0 20px #f9d8013c;
 }
@@ -431,6 +434,29 @@ to{scale: 1;  opacity: 1; }
   box-shadow: 0 0 20px #f9d8013c;
 }
 
+/* Text Area Scroller */
+#enq-description::-webkit-scrollbar {
+  border: none;
+  width: 7px;
+  height: 7px;
+}
+
+#enq-description::-webkit-scrollbar-track {
+  background: #181818;
+}
+
+#enq-description::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  background: var(--prycol);
+}
+
+#enq-description::-webkit-scrollbar-thumb:hover {
+  color: #463d00;
+}
+
+#enq-descriptiont::-webkit-scrollbar-button {
+  display: none;
+}
 
 /* If the screen size is 1200px wide or more, set the font-size to 80px */
 @media (min-width: 1200px) {
@@ -451,3 +477,65 @@ to{scale: 1;  opacity: 1; }
   }
 }
 
+.my-work {
+  background: url(assets/Background\ 2.jpg) ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.scroller {
+  margin: auto;
+  max-width: 400px;
+
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller[data-animated="true"] .scroller-inner {
+  flex-wrap: nowrap;
+  animation: scrolling-logo 5s linear infinite;
+  width: max-content;
+}
+
+.scroller-inner {
+  /* outline: 3px solid lime; */
+  /* flex-wrap: wrap; */
+}
+
+@keyframes scrolling-logo {
+  to {
+    transform: translate(calc(-50% + 0.8rem));
+  }
+}
+.tags {
+  color: white;
+  margin: 0;
+  list-style: none;
+  padding-inline: 0;
+  background-color: var(--prycol);
+}
+
+.tools {
+  cursor: url(assets/aicursor.png), auto;
+}
+.tool-logos {
+  height: 25px;
+  opacity: .5;
+  filter:  blur(20px);
+  transition: all ease-in-out 0.3s;
+  cursor: url(assets/aicursor.png), auto;
+}
+
+.tools:hover > .tool-logos {
+  opacity: 1;
+  scale: 1.1;
+  filter: blur(0px);
+}
+
+.customer-reviews {
+
+}
