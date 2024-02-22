@@ -23,6 +23,7 @@
   border: none;
   width: 7px;
   height: 7px;
+  
 }
 
 :root::-webkit-scrollbar-track {
@@ -309,6 +310,12 @@ a.nav-link:active::after {
   right: 0;
 }
 
+.about-section {
+  background-color: var(--prycol);
+  transition: all ease-in-out 0.3s;
+  cursor: url(assets/aicursordark.png), auto;
+}
+
 .tools-section {
   background-color: var(--prycol);
 }
@@ -365,18 +372,20 @@ a.nav-link:active::after {
   cursor: url(assets/aicursordark.png), auto;
 }
 
-.pComp {
-  scale: .98;
-  opacity: 0;
-  animation: fade-in linear forwards;
+.fadeInUpAnim {
+  animation: fadeInUp linear forwards;
   animation-timeline: view();
   animation-range-start: 10vh;
-  animation-range-end: 95vh ;
+  animation-range-end: 60vh ;
+  opacity: 0;
 }
 
-@keyframes fade-in {
-  
-to{scale: 1;  opacity: 1; }
+.fadeIn {
+  animation: fadeIn linear forwards;
+  animation-timeline: view();
+  animation-range-start: 10vh;
+  animation-range-end: 60vh ;
+  opacity: 0;
 }
 
 .enquiry-form {
@@ -483,10 +492,80 @@ to{scale: 1;  opacity: 1; }
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.portfolio-section {
+  background: url(assets/Background\ 2.jpg) ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* height: 100vh; */
+}
+
+.portfolio {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+/* If the screen size is smaller than 800px, set the font-size to 80px */
+@media (max-width: 799px) {
+  .portfolio {
+    grid-template-columns: 1fr;
+
+  }
+}
+
+.portfolio-content {
+  height: 250px;
+  position: relative;
+  transition: all ease-in-out 0.2s, border ease-in-out 0.4s;
+  border-radius: 6px;
+  background-color: #ffffff06;
+  box-shadow: 0px 1px 2px rgba(255, 255, 255, 0.06) inset, 5px 5px 12px rgba(0, 0, 0, 0.13);
+  overflow: hidden;
+}
+
+.portfolio-image {
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio-card-body {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.236);
+  backdrop-filter: blur(4px);
+  border-radius: 6px;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.portfolio-link-card {
+  cursor:  url(assets/aicursor\ pointer.png), pointer;
+}
+
+.portfolio-link-card:hover  .portfolio-card-body {
+  opacity: 1;
+}
+
+.portfolio-link-card:hover .portfolio-content {
+  border: 1px ridge rgba(255, 255, 255, 0.2);
+}
+
+.visit {
+  font-weight: thin;
+  text-decoration: underline transparent;
+  transition: all 0.3s;
+}
+
+.visit:hover {
+  text-decoration: underline white;
+}
+
 .scroller {
   margin: auto;
   max-width: 400px;
-
 }
 
 .scroller[data-animated="true"] {
@@ -499,11 +578,6 @@ to{scale: 1;  opacity: 1; }
   flex-wrap: nowrap;
   animation: scrolling-logo 5s linear infinite;
   width: max-content;
-}
-
-.scroller-inner {
-  /* outline: 3px solid lime; */
-  /* flex-wrap: wrap; */
 }
 
 @keyframes scrolling-logo {
@@ -530,12 +604,19 @@ to{scale: 1;  opacity: 1; }
   cursor: url(assets/aicursor.png), auto;
 }
 
+/* If the screen size is smaller than 989px, Logo's stay unblurred */
+@media (max-width: 989px) {
+  .tool-logos{
+    opacity: 1;
+    filter: none;
+
+  }
+  
+}
+
+
 .tools:hover > .tool-logos {
   opacity: 1;
   scale: 1.1;
   filter: blur(0px);
-}
-
-.customer-reviews {
-
 }
