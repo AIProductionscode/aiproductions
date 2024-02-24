@@ -5,6 +5,10 @@
   --subheading: Nexa-font;
   --paragraph: Nexa-font;
 }
+::selection {
+  color: var(--grey-col);
+  background-color: var(--prycol);
+}
 
 .web-content {
   display: none;
@@ -23,7 +27,6 @@
   border: none;
   width: 7px;
   height: 7px;
-  
 }
 
 :root::-webkit-scrollbar-track {
@@ -43,6 +46,42 @@
   display: none;
   
 }
+.welcome-text {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: fadeIn 3s ease forwards , fadeOut 1s ease-in-out forwards 4s;
+}
+
+.logo-svg {
+  width: 70vw;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  fill: transparent;
+  animation: lineAnim 2s ease-in-out forwards 1s, fillAnim 0.5s ease-in-out forwards 3s, fadeOut 1s ease-in-out forwards 4s;
+}
+
+.logo-svg {
+  stroke-dasharray: 700px;
+  stroke-dashoffset: 700px;
+}
+
+@keyframes lineAnim {
+  to{
+      stroke-dashoffset: 0;
+  }
+}
+@keyframes fillAnim {
+  to{
+      fill: #f9d801;
+  }
+}
+
+
+
 
 /* Glow Cursor */
 .glow-cursor {

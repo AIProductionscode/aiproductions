@@ -1,40 +1,26 @@
-
-
 $(document).ready(function () {
 
-  //Function to play sound
-  function playOpeningMusic () {
-    $('audio#opening')[0].play();
-  }
 
-  // If button is clicked then play run function to play sound
-  $("#playOpening").click(
-    playOpeningMusic()
-  )
+  //Wait for 5s for opening theme to finish playing
 
-  //Function to click the button automatically
-function openSite() {
-    $("#playOpening").click();
-    console.log("Music plays")
-  }
-  
-  
-
-
+  $("#spinner").hide();
   //*Loading Animation
-  $("#spinner").show();
-  $(".web-content").hide();
-  $(".glow-cursor").fadeOut();
+  setTimeout(function () {
+    $("#spinner").fadeIn();
+    $(".web-content").hide();
+    $(".glow-cursor").fadeOut();
+    $("body").css("overflow", "hidden");
+  }, 5000);
 
 
 
   //Add a delay of 2000 milliseconds (2 seconds)
   setTimeout(function () {
     $(".web-content").show();
-    $("#spinner").hide()
+    $("#spinner").fadeOut()
     $(".glow-cursor").fadeIn();
-
-  }, 4000);
+    $("body").css("overflow", "auto");
+  }, 9000);
 
 
 
