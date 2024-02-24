@@ -1,24 +1,60 @@
 
+
 $(document).ready(function () {
 
+  //Function to play sound
+  function playOpeningMusic () {
+    $('audio#opening')[0].play();
+  }
 
-//Navbar retract and expand
-window.onscroll = function() { scrollFunction()};
+  // If button is clicked then play run function to play sound
+  $("#playOpening").click(
+    playOpeningMusic()
+  )
 
-function scrollFunction() {
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    $("#navbar").fadeOut();
-   
-  } else {
-    $("#navbar").fadeIn();
-   }
-}
+  //Function to click the button automatically
+function openSite() {
+    $("#playOpening").click();
+    console.log("Music plays")
+  }
+  
+  
+
+
+  //*Loading Animation
+  $("#spinner").show();
+  $(".web-content").hide();
+  $(".glow-cursor").fadeOut();
+
+
+
+  //Add a delay of 2000 milliseconds (2 seconds)
+  setTimeout(function () {
+    $(".web-content").show();
+    $("#spinner").hide()
+    $(".glow-cursor").fadeIn();
+
+  }, 4000);
+
+
+
+  //Navbar retract and expand
+  window.onscroll = function () { scrollFunction() };
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+      $("#navbar").fadeOut();
+
+    } else {
+      $("#navbar").fadeIn();
+    }
+  }
 
 
   //Infinite Logo Scrolling
   const scrollers = document.querySelectorAll(".scroller");
 
-  if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     addAnimation();
   }
 
@@ -26,7 +62,7 @@ function scrollFunction() {
     scrollers.forEach(scroller => {
       scroller.setAttribute("data-animated", true);
       const scrollerInner = document.querySelector(".scroller-inner");
-      const scrollerContent =  Array.from(scrollerInner.children);
+      const scrollerContent = Array.from(scrollerInner.children);
 
       scrollerContent.forEach(item => {
         const duplicatedItem = item.cloneNode(true);
@@ -36,18 +72,7 @@ function scrollFunction() {
 
     })
   }
-  
-  //*Loading Animation
-  $("#spinner").show();
-  $(".web-content").hide();
-  $(".glow-cursor").fadeOut();
-  //Add a delay of 2000 milliseconds (2 seconds)
-  setTimeout(function () {
-    $(".web-content").show();
-    $("#spinner").hide()
-    $(".glow-cursor").fadeIn();
 
-  }, 4000);
 
   // //Animation on scroll
   // $(".head1").waypoint(
@@ -102,16 +127,16 @@ function scrollFunction() {
       function () {
         const counters = document.querySelectorAll(".counter");
         const speed = 1;
-  
+
         counters.forEach(counter => {
           const updateCount = () => {
             const target = +counter.getAttribute('data-target');
             const count = +counter.textContent;
-  
+
             if (count < target) {
               counter.innerText = Math.ceil(count + speed);
               setTimeout(updateCount, 20);
-  
+
             } else {
               count.innerText = target;
             }
@@ -124,7 +149,7 @@ function scrollFunction() {
       }
     )
   }, 6000);
- 
+
 
 
 

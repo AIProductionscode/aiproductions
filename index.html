@@ -11,13 +11,6 @@
     <script src="https://kit.fontawesome.com/66cbe4e6cf.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-    <!-- aos -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <script>
-        AOS.init();
-    </script>
-
     <!-- CSS File     -->
     <link rel="stylesheet" href="style.css">
 
@@ -32,6 +25,11 @@
 </head>
 
 <body>
+    <!-- Opening Music -->
+    <audio id="opening">
+        <source src="audio/opening.mp3"></source>
+    </audio>
+  
     <!-- Loading Animation -->
     <div class="spinner" id="spinner">
         <img src="assets/Ai Productions Icon.png" class="spinner-img" alt="Loader">
@@ -41,9 +39,12 @@
         <!-- Cursor Glow -->
         <div class="glow-cursor">
         </div>
+
+
+        <!--Landing Page Section-->
         <section class="body pb-5">
             <!-- Navigation -->
-            <nav id="navbar" class="navbar navbar-expand-lg fixed-top top px-4 " aria-label="Navigation">
+            <nav id="navbar" class="navbar navbar-expand-lg fixed-top top px-4 animate__animated animate__fadeInDown animate__delay-2s" aria-label="Navigation">
 
                 <a class="navbar-brand" href="#"><img src="assets/AI Productions Logo Secondary.png" class="logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation-bar"
@@ -107,13 +108,13 @@
                         <p class="heading lh-1 animate__animated animate__fadeInUp pt-5">AKINTUNDE ISRAEL</p>
                         <p class="sub-heading animate__animated animate__fadeInUp animate__delay-1s">Creative Designer &
                             Front-End Dev<span style="color: var(--prycol);">.</span></p>
-                        <p class="paragraph animate__animated animate__fadeInUp animate__delay-2s">
+                        <p class="paragraph animate__animated animate__fadeInUp animate__delay-1s">
                             I'm a creative designer and innovative developer. I blend visual
                             aesthetics with technical prowess to craft captivating designs and cutting-edge solutions.
                             Let me bring your vision to life!
                         </p>
                         <div
-                            class="gap-2 d-md-flex justify-content-md-start animate__animated animate__fadeInUp animate__delay-3s">
+                            class="gap-2 d-md-flex justify-content-md-start animate__animated animate__fadeInUp animate__delay-2s">
                             <a href="#" class="btn-pry px-lg-4 py-lg-2 px-2 py-2 interactive">HIRE ME</a>
                             <a href="#" class="btn-sec px-lg-4 py-lg-2 px-2 py-2 interctive">MY PROJECTS <span
                                     class="right-arrow"><i class="fa-solid fa-arrow-right"></i></span> </a>
@@ -131,12 +132,14 @@
             </section>
             <!--Home Section-->
         </section>
-        <!--Landing Page Section-->
 
         <!--About Section-->
         <section class="about-section">
             <div class="container-fluid">
-                <div class="row flex-lg-row px-5 mx-5 justify-content-center py-5">
+                <div>
+                    <p class="heading-dark pt-5 fadeInUpAnim text-center" style="font-size: 60px; line-height: 3rem;">Get to know me as a</p>
+                </div>
+                <div class="row flex-lg-row px-5 mx-5 justify-content-center pb-5">
                     <div class="col-lg-5 px-lg-3">
                         <p class="heading-dark fadeInUpAnim" style="font-size: 50px;">Designer</p>
                         <p class="paragraph-dark px-2 fadeInUpAnim">I'm not just a designer; I'm the creative force
@@ -170,12 +173,12 @@
                 </div>
             </div>
             <div class="container py-5">
-                <div class="row d-flex justify-content-center text-center px-lg-0 px-md-5 px-sm-5 fadeIn">
+                <div class="row d-flex justify-content-center text-center px-lg-0 px-md-5 px-sm-5 fadeIn px-5">
                     <div class="col-lg-2">
                         <p class="heading pt-5" style="font-size: 50px; text-align: center;" data-aos="fade-up">SKILLS
                         </p>
                     </div>
-                    <div class="col-lg-3 px-md-3" style="text-align: left;">
+                    <div class="col-lg-3" style="text-align: left;">
                         <p class="sub-heading" style="color: var(--prycol);">DESIGN</p>
                         <p class="paragraph tools">Photoshop &nbsp;<img src="assets/photoshop 3d.png" alt="PS"
                                 class="img-fluid tool-logos"></p>
@@ -525,11 +528,6 @@
                 </div>
             </div>
         </section>
-
-
-
-
-
     </div>
 
 
@@ -543,6 +541,7 @@
 
 
 
+    <button id="playOpening" onclick="playOpeningMusic()" class="invisible">Play Opening</button>
 
 
 

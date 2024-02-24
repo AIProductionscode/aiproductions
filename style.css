@@ -2,8 +2,8 @@
   --heading: Typographica;
   --prycol: #f9d801;
   --grey-col: #181818;
-  --subheading: Nexa;
-  --paragraph: Nexa;
+  --subheading: Nexa-font;
+  --paragraph: Nexa-font;
 }
 
 .web-content {
@@ -15,7 +15,7 @@
   src: url(fonts/TypoGraphica.otf);
 }
 @font-face {
-  font-family: Nexa;
+  font-family: Nexa-font;
   src: url(fonts/NexaRegular.otf);
 }
 
@@ -218,14 +218,14 @@ a.nav-link:active::after {
 }
 
 .paragraph {
-  font-family: var(--paragraph) thin;
+  font-family: var(--paragraph);
   color: white;
   font-size: 16px;
   font-weight: 200;
 }
 
 .paragraph-dark {
-  font-family: var(--paragraph) thin;
+  font-family: var(--paragraph);
   color: var(--grey-col);
   font-size: 16px;
   font-weight: 200;
@@ -410,10 +410,8 @@ a.nav-link:active::after {
 }
 .enq-form-name, .enq-form-email {
   border: 1px solid white ;
-  /* width: 300px; */
   height: 40px;
   background-color: rgba(255, 255, 255, 0.02);
-  /* border: 1px groove white; */
   border-radius: 5px;
   transition: all ease-in-out 0.3s;
   color: white;
@@ -421,10 +419,7 @@ a.nav-link:active::after {
 
 .enq-form-message {
   border: 1px solid white ;
-  /* width: 45vw;
-  height: 200px; */
   background-color: rgba(255, 255, 255, 0.02);
-  /* border: 1px groove white; */
   border-radius: 5px;
   transition: all ease-in-out 0.3s;
   color: white;
@@ -609,7 +604,6 @@ a.nav-link:active::after {
   .tool-logos{
     opacity: 1;
     filter: none;
-
   }
   
 }
