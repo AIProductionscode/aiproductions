@@ -54,6 +54,12 @@
   animation: fadeIn 3s ease forwards , fadeOut 1s ease-in-out forwards 4s;
 }
 
+@media (max-width: 800px) {
+  .welcome-text {
+    top: 40%;
+  }
+}
+
 .logo-svg {
   width: 70vw;
   position: absolute;
