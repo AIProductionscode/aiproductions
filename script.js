@@ -1,28 +1,38 @@
 $(document).ready(function () {
 
+  $('.welcome').hide();
+  $("#spinner").hide();
+  $(".web-content").hide();
+
+  $('.enter').click(
+    function () {
+      $('.enter').fadeOut();
+      $('.welcome').show();
+      $('audio')[0].play();
+      setTimeout(function () {
+        showWebContent();
+      }, 5000);
+    }
+  );
 
   //Wait for 5s for opening theme to finish playing
-
-  $("#spinner").hide();
-  //*Loading Animation
-  setTimeout(function () {
+  function showWebContent() {
+    //*Loading Animation
     $("#spinner").fadeIn();
     $(".web-content").hide();
     $(".glow-cursor").fadeOut();
     $("body").css("overflow", "hidden");
-  }, 5000);
 
 
+    //Add a delay of 2000 milliseconds (2 seconds)
+    setTimeout(function () {
+      $(".web-content").show();
+      $("#spinner").fadeOut()
+      $(".glow-cursor").fadeIn();
+      $("body").css("overflow", "auto");
+    }, 9000);
 
-  //Add a delay of 2000 milliseconds (2 seconds)
-  setTimeout(function () {
-    $(".web-content").show();
-    $("#spinner").fadeOut()
-    $(".glow-cursor").fadeIn();
-    $("body").css("overflow", "auto");
-  }, 9000);
-
-
+  }
 
   //Navbar retract and expand
   window.onscroll = function () { scrollFunction() };
@@ -97,13 +107,25 @@ $(document).ready(function () {
   const interactiveElements = document.querySelectorAll('.interactive');
   interactiveElements.forEach((element) => {
     element.addEventListener('mouseenter', () => {
-      cursor.style.width = '120px';
-      cursor.style.height = '120px';
+      cursor.style.width = '100px';
+      cursor.style.height = '100px';
+      cursor.style.webkitFilter = "blur(120px)";
+
     });
     element.addEventListener('mouseleave', () => {
       cursor.style.width = '150px';
       cursor.style.height = '150px';
+      cursor.style.webkitFilter = "blur(150px)";
+
     });
+
+  });
+  const webContent = document.querySelector('.web-content')
+  webContent.addEventListener('mousedown', () => {
+    cursor.style.webkitFilter = "blur(120px)";
+  });
+  webContent.addEventListener('mouseup', () => {
+    cursor.style.webkitFilter = "blur(150px)";
   });
 
 
