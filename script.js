@@ -1,19 +1,37 @@
 $(document).ready(function () {
 
-  $('.welcome').hide();
-  $("#spinner").hide();
-  $(".web-content").hide();
+  // $('.welcome').hide();
+  // $("#spinner").hide();
+  // $(".web-content").hide();
 
-  $('.enter').click(
-    function () {
-      $('.enter').fadeOut();
-      $('.welcome').show();
-      $('audio')[0].play();
-      setTimeout(function () {
-        showWebContent();
-      }, 5000);
-    }
-  );
+  // $('.enter').on('click', function () {
+  //   enterButtonClick();
+  // });
+
+  // $(document).on('keypress', function (e) {
+  //   if (e.which === 13) {
+  //     enterButtonClick();
+  //   }
+  // });
+
+  // function enterButtonClick() {
+  //   $('.enter').fadeOut();
+  //   $('.bg-vid').fadeOut();
+  //   $('.welcome').show();
+  //   $('audio')[0].play();
+  //   setTimeout(function () {
+  //     showWebContent();
+  //   }, 5000);
+  // }
+
+  //*For quick load
+  $('.enter').hide();
+  $('.bg-vid').hide();
+  $("#spinner").hide();
+  $('.welcome').hide();
+  $('.animate__animated').removeClass('animate__animated');
+
+
 
   //Wait for 5s for opening theme to finish playing
   function showWebContent() {
@@ -32,18 +50,6 @@ $(document).ready(function () {
       $("body").css("overflow", "auto");
     }, 9000);
 
-  }
-
-  //Navbar retract and expand
-  window.onscroll = function () { scrollFunction() };
-
-  function scrollFunction() {
-    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-      $("#navbar").fadeOut();
-
-    } else {
-      $("#navbar").fadeIn();
-    }
   }
 
 
@@ -83,17 +89,16 @@ $(document).ready(function () {
 
 
   //Navbar retract and expand
-  var prevScrollpos = window.pageYOffset;
-  window.onscroll = function () {
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-      document.querySelector(".navbar").style.top = "0";
-    }
-    else {
-      document.querySelector(".navbar").style.top = "-100px";
-    }
-    prevScrollpos = currentScrollPos;
-  }
+  // var prevScrollpos = $(window).scrollTop();
+  // $(window).scroll(function () {
+  //   var currentScrollPos = $(window).scrollTop();
+  //   if (prevScrollpos > currentScrollPos) {
+  //     $(".navbar").css("top", "0");
+  //   } else {
+  //     $(".navbar").css("top", "-100px");
+  //   }
+  //   prevScrollpos = currentScrollPos;
+  // });
 
 
   //*Glow cursor
