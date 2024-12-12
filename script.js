@@ -14,11 +14,14 @@ $(document).ready(function () {
     }
   });
 
+  // Opening Theme
   function enterButtonClick() {
     $('.enter').fadeOut();
-    $('.bg-vid').fadeOut();
     $('.welcome').show();
-    $('audio')[0].play();
+    // $('audio')[0].play();
+
+    
+    //Wait for 5s for opening theme to finish playing
     setTimeout(function () {
       showWebContent();
     }, 5000);
@@ -37,6 +40,10 @@ $(document).ready(function () {
   function showWebContent() {
     //*Loading Animation
     $("#spinner").fadeIn();
+    //Spinner Fade of after 2s
+    setTimeout(function () {
+      $("#spinner").fadeOut();
+    }, 2000);
     $(".web-content").hide();
     $(".glow-cursor").fadeOut();
     $("body").css("overflow", "hidden");
@@ -45,10 +52,10 @@ $(document).ready(function () {
     //Add a delay of 2000 milliseconds (2 seconds)
     setTimeout(function () {
       $(".web-content").show();
-      $("#spinner").fadeOut()
+     
       $(".glow-cursor").fadeIn();
       $("body").css("overflow", "auto");
-    }, 9000);
+    }, 2000);
 
   }
 
