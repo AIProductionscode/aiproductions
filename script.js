@@ -1,31 +1,35 @@
-$(document).ready(function () {
 
+$(document).ready(function () {
   $('.welcome').hide();
   $("#spinner").hide();
-  $(".web-content").hide();
+  $(".enter").hide();
 
-  $('.enter').on('click', function () {
-    enterButtonClick();
-  });
+  // $('.welcome').hide();
+  // $("#spinner").hide();
+  // $(".web-content").hide();
 
-  $(document).on('keypress', function (e) {
-    if (e.which === 13) {
-      enterButtonClick();
-    }
-  });
+  // $('.enter').on('click', function () {
+  //   enterButtonClick();
+  // });
 
-  // Opening Theme
-  function enterButtonClick() {
-    $('.enter').fadeOut();
-    $('.welcome').show();
-    // $('audio')[0].play();
+  // $(document).on('keypress', function (e) {
+  //   if (e.which === 13) {
+  //     enterButtonClick();
+  //   }
+  // });
+
+  // // Opening Theme
+  // function enterButtonClick() {
+  //   $('.enter').fadeOut();
+  //   $('.welcome').show();
+  //   // $('audio')[0].play();
 
     
-    //Wait for 5s for opening theme to finish playing
-    setTimeout(function () {
-      showWebContent();
-    }, 5000);
-  }
+  //   //Wait for 5s for opening theme to finish playing
+  //   setTimeout(function () {
+  //     showWebContent();
+  //   }, 5000);
+  // }
 
   //*For quick load
   // $('.enter').hide();
@@ -34,7 +38,15 @@ $(document).ready(function () {
   // $('.welcome').hide();
   // $('.animate__animated').removeClass('animate__animated');
 
-
+// Navbar scroll background control
+  // $(window).on('scroll', function() {
+  //   if ($(this).scrollTop() > 0) {
+  //     $('.navbar').addClass('scrolled');
+  //   } else {
+  //     $('.navbar').removeClass('scrolled');
+  //   }
+  // });
+  
 
   //Wait for 5s for opening theme to finish playing
   function showWebContent() {
@@ -173,8 +185,23 @@ $(document).ready(function () {
 
 
 
+// adjust navbar for desktop or mobile screen
+// Function to check screen size and add/remove class
+function checkScreenSize() {
+  if ($(window).width() > 992) {
+    $('.navbar').addClass('navbar-desktop'); // Add class for small screens
+  } else {
+    $('.navbar').removeClass('navbar-desktop'); // Remove class for larger screens
+  }
+}
 
+// Run on page load
+checkScreenSize();
 
+// Run on window resize
+$(window).resize(function () {
+  checkScreenSize();
+});
 
 
 

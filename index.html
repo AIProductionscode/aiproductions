@@ -13,7 +13,7 @@
 
     <!-- Animate.styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    
+
     <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
@@ -28,11 +28,19 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
     <link rel="manifest" href="assets/site.webmanifest">
+
+    <!-- Montserrat Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body>
 
-    <div class="container d-flex justify-content-center " style="position: absolute; top: 50%; left: 50%; transform: translateX(-50%);">
+    <div class="container d-flex justify-content-center "
+        style="position: absolute; top: 50%; left: 50%; transform: translateX(-50%);">
         <button class="enter btn-sec interactive px-lg-4 py-lg-2 px-2 py-2 pulse">Lets Go</button>
     </div>
 
@@ -45,7 +53,7 @@
 
         <div class="container-fluid ">
             <div class="row">
-                <p class="sub-heading text-center welcome-text">Welcome to</p>
+                <p class="sub-title text-center welcome-text">Welcome to</p>
                 <div class="col-8  text-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="logo-svg" height="82" width="615"
                         viewBox="0 0 720.02 108.69">
@@ -84,7 +92,7 @@
             </div>
         </div>
     </div>
-    
+
 
     <!-- Loading Animation -->
     <div class="spinner" id="spinner">
@@ -101,7 +109,7 @@
         <section class="body pb-5">
             <!-- Navigation -->
             <nav id="navbar"
-                class="navbar navbar-expand-lg fixed-top top px-4 animate__animated animate__fadeInDown animate__delay-2s"
+                class="navbar navbar-expand-lg px-4 animate__animated animate__fadeInDown animate__delay-2s"
                 aria-label="Navigation">
 
                 <a class="navbar-brand" href="#navbar"><img src="assets/AI Productions Logo Secondary.png"
@@ -114,16 +122,16 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navigation-bar">
                     <ul class="navbar-nav mb-2 mb-sm-0">
                         <li class="nav-item px-4">
-                            <a class="nav-link interactive active-link" aria-current="page" href="index.html">HOME</a>
+                            <a class="nav-link interactive active-link" aria-current="page" href="index.html">Home</a>
                         </li>
                         <li class="nav-item px-4">
-                            <a class="nav-link interactive" href="portfolio.html">PROJECTS</a>
+                            <a class="nav-link interactive" href="portfolio.html">Projects</a>
                         </li>
                         <li class="nav-item px-4">
-                            <a class="nav-link interactive" href="#">ABOUT</a>
+                            <a class="nav-link interactive" href="#">Resume</a>
                         </li>
                         <li class="nav-item px-4">
-                            <a class="nav-link interactive" href="#">CONTACT</a>
+                            <a class="nav-link interactive" href="#">Contact</a>
                         </li>
 
                         <span class="d-flex">
@@ -159,191 +167,181 @@
             </nav>
             <!--Navigation-->
 
-
-            <!--Home Section-->
-            <section class="container col-xxl-8 px-4 py-2 ">
-                <div class="row flex-lg-row  align-items-center py-5">
-                    <div class="col-lg-6 order-last">
-                        <p class="heading lh-1 animate__animated animate__fadeInUp pt-5">AKINTUNDE ISRAEL</p>
-                        <p class="sub-heading animate__animated animate__fadeInUp animate__delay-1s">Creative Designer &
-                            Front-End Dev<span style="color: var(--prycol);">.</span></p>
-                        <p class="paragraph animate__animated animate__fadeInUp animate__delay-1s">
-                            I'm a creative designer and innovative developer. I blend visual
-                            aesthetics to craft captivating designs and build visually appealing front-end with code.
-                            Let me bring your vision to life!
+            <!--Intro Section-->
+            <section class="container intro-section">
+                <div class="row ">
+                    <div class="col-lg-6">
+                        <p class="heading animate__animated animate__fadeInUp pt-5 text-upper">Akintunde<br>Israel
                         </p>
-                        <div
-                            class="gap-2 d-md-flex justify-content-md-start animate__animated animate__fadeInUp animate__delay-2s">
+                        <p class="sub-title animate__animated animate__fadeInUp animate__delay-1s">Creative Designer &
+                            Front-End Developer<span style="color: var(--prycol);">.</span></p>
+                        <div class="animate__animated animate__fadeInUp animate__delay-1s">
+                            <p class="paragraph">
+                                I'm a creative designer and innovative developer. I blend visual
+                                aesthetics to craft captivating designs and build visually appealing front-end with
+                                code.
+                                Let me bring your vision to life!
+                            </p>
+                        </div>
+                        <!-- <div
+                            class="gap-2 d-md-flex justify-content-md-start animate__animated animate__fadeInUp animate__delay-2s py-2">
                             <a href="#" class="btn-pry interactive px-lg-4 py-lg-2 px-2 py-2">HIRE ME</a>
                             <a href="#" class="btn-sec interactive px-lg-4 py-lg-2 px-2 py-2">MY PROJECTS <span
                                     class="right-arrow"><i class="fa-solid fa-arrow-right"></i></span> </a>
+                        </div> -->
+                        <div class="animate__animated animate__fadeInUp animate__delay-2s py-3">
+                            <a href="#" class="btn-pry interactive" style="padding-inline: 5rem;">Hire Me</a>
                         </div>
                     </div>
 
-                    <div
-                        class="gap-5 animate__animated animate__fadeInLeft animate__delay-1s text-center col-sm-8 col-lg-6">
-                        <!-- <spline-viewer url="https://prod.spline.design/LEvjG3OETYd2GsRw/scene.splinecode"
-                            class="d-block mx-lg-auto img-fluid spline animate__animated animate__fadeInRight"
-                            width="700" height="500"></spline-viewer> -->
-                        <img src="assets/Israel ai.png" alt="Israel" class=" israel-img mx-sm-1">
-                    </div>
+                    <!-- <div class="col-lg-6 ">
+                        <div class="animate__animated animate__fadeInLeft animate__delay-1s text-center ">
+                            <img src="assets/Israel ai.png" alt="Israel" class=" israel-img">
+                        </div>
+                    </div> -->
                 </div>
             </section>
-            <!--Home Section-->
-        </section>
 
-        <!--About Section-->
-        <section class="about-section">
-            <div class="container-fluid">
-                <div>
-                    <p class="heading-dark pt-5  text-center" style="font-size: 60px; line-height: 3rem;">
-                        Get to know me as a</p>
-                </div>
-                <div class="row flex-lg-row  justify-content-center pb-5">
-                    <div class="col-lg-5 px-lg-3">
-                        <p class="heading-dark" style="font-size: 50px;">Designer</p>
-                        <p class="paragraph-dark px-2 ">I'm not just a designer; I'm the creative force
-                            your project deserves! I bring a burst of creativity to the table, specializing in crafting
-                            innovative graphic designs that are perfectly tailored to meet your unique needs and enhance
-                            your brand. Let's collaborate to turn your vision into a visually stunning reality!</p>bbbbbbb
+            <!--About Section-->
+            <section class="about-section container py-5">
+
+                <p class="sub-heading ">About Me.</p>
+                <p class="paragraph">I am a Creative Designer with over <b>5 years</b> experience, and i've been
+                    building and
+                    designing for the Web for over 2 years as well.
+                    I am a passionate about creative solutions for brands & individuals.
+                    wether its design or development i make sure to put in the best to make the project come out on top.
+                    Performance, Aesthetics, Excellent User Experince are all covered when you bring me on board.
+                    My aim is to bring across your message and identity in the most creative way. You can trust that you
+                    have the right guy on your team</p>
+
+                <!-- Design -->
+                <div class="row justify-content-center py-5 px-3">
+                    <div class="col-lg-6 px-lg-3">
+                        <p class="sub-heading">Design</p>
+                        <p class="paragraph">I'm the creative force
+                            your project deserves! I craft
+                            innovative designs that are perfectly tailored to meet your unique needs. Let's collaborate
+                            to turn your vision into a visually stunning reality!</p>
                     </div>
 
-                    <div class="col-lg-5 px-lg-3">
-                        <p class="heading-dark " style="font-size: 50px;">Developer</p>
-                        <p class="paragraph-dark px-2 ">When it comes to building the front-end of your
-                            applications, I've got all the right tools in my toolkit. I can work seamlessly on my own to
-                            bring you speedy and robust solutions, all geared towards optimal performance and
+                    <div class="col-lg-6 px-lg-3">
+                        <div class=" mt-lg-5">
+                            <p class="sub-title">My Design Tools & Skills<span style="color: var(--prycol);">.</span>
+                            </p>
+                            <div class="d-flex flex-wrap gap-1" style="padding: 0; margin: 0;">
+                                <p class="paragraph tools">Adobe Photoshop</p>
+                                <p class="paragraph tools">Adobe Illustrator</p>
+                                <p class="paragraph tools">Figma</p>
+                                <p class="paragraph tools">Corel Draw</p>
+                                <p class="paragraph tools">Corporate Design</p>
+                                <p class="paragraph tools">Event Design</p>
+                                <p class="paragraph tools">Social Media Design</p>
+                                <p class="paragraph tools">Posters</p>
+                                <p class="paragraph tools">Brand Identity</p>
+                                <p class="paragraph tools">Logo Design</p>
+                                <p class="paragraph tools">UI/UX</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Development -->
+                <div class="row justify-content-center py-5 px-3">
+                    <div class="col-lg-6 px-lg-3">
+                        <p class="sub-heading">Development</p>
+                        <p class="paragraph">I build amazing and functional websites for all your brand or organization
+                            needs.
+                            I can work seamlessly to bring you speedy and robust solutions, all geared towards optimal
+                            performance and
                             scalability—making sure your priorities are my priorities!</p>
                     </div>
-                </div>
-            </div>
-        </section>
 
-
-        <!--Skills-->
-        <section id="my-work-section" class="my-work text-center pt-5">
-
-            <div class="container">
-                <div class="row">
-                    <!-- <h1 class="heading">MY &nbsp;WORK</h1> -->
-                    <!-- <p class="paragraph">Here are the technologies I work with for my <a href="#"
-                                style="color:#f9d801; text-decoration: none;">graphic design</a> and <a href="#"
-                                style="color:#f9d801; text-decoration: none;">Front-End
-                                Development</a> projects </p> -->
-                </div>
-            </div>
-            <div class="container py-5">
-                <div class="row d-flex justify-content-center text-center px-lg-0 px-md-5 px-sm-5 fadeIn px-5">
-                    <div class="col-lg-2">
-                        <p class="heading pt-5" style="font-size: 50px; text-align: center;" data-aos="fade-up">SKILLS
-                        </p>
-                    </div>
-                    <div class="col-lg-3" style="text-align: left;">
-                        <p class="sub-heading" style="color: var(--prycol);">DESIGN</p>
-                        <p class="paragraph tools">Photoshop &nbsp;<img src="assets/photoshop 3d.png" alt="PS"
-                                class="img-fluid tool-logos"></p>
-                        <p class="paragraph tools">Illustrator &nbsp;<img src="assets/illustrator 3d.png" alt="AI"
-                                class="img-fluid tool-logos"></p>
-                        <p class="paragraph tools">Figma &nbsp;<img src="assets/figma 3d.png" alt="FIGMA"
-                                class="img-fluid tool-logos"></p>
-                        <p class="paragraph tools">Corel Draw &nbsp;<img src="assets/corel draw 3d.png" alt="COREL"
-                                class="img-fluid tool-logos"></p>
-                    </div>
-                    <div class="col-lg-3" style="text-align: left;">
-                        <p class="sub-heading" style="color: var(--prycol);">LANGUAGES</p>
-                        <p class="paragraph tools">HTML &nbsp;<img src="assets/html 3d - 3.png" alt="HTML"
-                                class="img-fluid tool-logos"></p>
-                        <p class="paragraph tools">CSS &nbsp;<img src="assets/css3d - 3.png" alt="CSS"
-                                class="img-fluid tool-logos"></p>
-                        <p class="paragraph tools">Javascript &nbsp;<img src="assets/javascripttttt 3d.png" alt="PS"
-                                class="img-fluid tool-logos"></p>
-                        <p class="paragraph tools">Java &nbsp;<img src="assets/java.png" alt="JAVA"
-                                class="img-fluid tool-logos"></p>
-                        <p class="paragraph tools">Dart &nbsp;<img src="assets/dart.png" alt="DART"
-                                class="img-fluid tool-logos"></p>
-                    </div>
-                    <div class="col-lg-3" style="text-align: left;">
-                        <p class="sub-heading" style="color: var(--prycol);">FRAMEWORKS & DEV TOOLS</p>
-                        <p class="paragraph tools">Bootstrap &nbsp;<img src="assets/bootstrap 3d.png" alt="BOOTSTRAP"
-                                class="img-fluid tool-logos"></p>
-                        <p class="paragraph tools">Jquery &nbsp;<img src="assets/jquery 3d.png" alt="JQUERY"
-                                class="img-fluid tool-logos"></p>
-                        <p class="paragraph tools">Flutter &nbsp;<img src="assets/flutter.png" alt="FLUTTER"
-                                class="img-fluid tool-logos"></p>
-                        <p class="paragraph tools">Git &nbsp;<img src="assets/git.png" alt="GIT"
-                                class="img-fluid tool-logos"></p>
-                        <p class="paragraph tools">Github &nbsp;<img src="assets/github.png" alt="GITHUB"
-                                class="img-fluid tool-logos"></p>
-                        <p class="paragraph tools">VS Code &nbsp;<img src="assets/visual-studio-code.png" alt="VS CODE"
-                                class="img-fluid tool-logos"></p>
+                    <div class="col-lg-6 px-lg-3">
+                        <div class=" mt-lg-5">
+                            <p class="sub-title">My Software Development Toolkit<span
+                                    style="color: var(--prycol);">.</span></p>
+                            <div class="d-flex flex-wrap gap-1" style="padding: 0; margin: 0;">
+                                <p class="paragraph tools">HTML</p>
+                                <p class="paragraph tools">CSS</p>
+                                <p class="paragraph tools">Javacscript</p>
+                                <p class="paragraph tools">Jquery</p>
+                                <p class="paragraph tools">Bootstrap</p>
+                                <p class="paragraph tools">Python</p>
+                                <p class="paragraph tools">Flask</p>
+                                <p class="paragraph tools">MongoDB</p>
+                                <p class="paragraph tools">Java</p>
+                                <p class="paragraph tools">Dart</p>
+                                <p class="paragraph tools">Flutter</p>
+                                <p class="paragraph tools">Git</p>
+                                <p class="paragraph tools">Github</p>
+                                <p class="paragraph tools">Vercel</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
 
 
+            </section>
 
-            <div class="scroller">
-                <div class="scroller-inner py-5 d-flex justify-content-center tag-list ">
-                    <li class="tags px-3 py-2 my-1 mx-1 rounded-1">HTML</li>
-                    <li class="tags px-3 py-2 my-1 mx-1 rounded-1">CSS</li>
-                    <li class="tags px-3 py-2 my-1 mx-1 rounded-1">JS</li>
-                    <li class="tags px-3 py-2 my-1 mx-1 rounded-1">BOOTSTRAP</li>
-                    <li class="tags px-3 py-2 my-1 mx-1 rounded-1">FIGMA</li>
-                    <li class="tags px-3 py-2 my-1 mx-1 rounded-1">PHOTOSHOP</li>
-                    <li class="tags px-3 py-2 my-1 mx-1 rounded-1">ILLUSTRATOR</li>
-                    <li class="tags px-3 py-2 my-1 mx-1 rounded-1">GITHUB</li>
-                    <li class="tags px-3 py-2 my-1 mx-1 rounded-1">JAVA</li>
-                </div>
-            </div>
-        </section>
-        
-        <!--Projects Completed-->
-        <section class="projects-completed">
-            <div class="container-fluid">
-                <p class="heading-dark text-center pt-5 " style="font-size: 50px; text-align: center;">
-                    PROJECTS COMPLETED </p>
+            <!--Projects Completed-->
+            <section class="projects-completed">
+                <div class="container-fluid">
+                    <p class="heading-dark text-center pt-5 " style="font-size: 50px; text-align: center;">
+                        PROJECTS COMPLETED </p>
 
-                <div class="row flex-lg-row px-5 mx-5 justify-content-center">
-                    <div class="col-lg-5">
-                        <center>
-                            <img src="assets/Graphic Icon Dark.svg" alt="Graphic" class="text-center img-fluid py-2"
-                                style="width: 50px;">
-                        </center>
-                        <p class="sub-heading-dark text-center">Design Projects</p>
-                        <p class="text-center heading-dark counter" data-target="450">0</p>
-                    </div>
-                    <!-- <div class="col-lg-1 text-center" style="background-color: var(--grey-col);">
+                    <div class="row flex-lg-row px-5 mx-5 justify-content-center">
+                        <div class="col-lg-5">
+                            <center>
+                                <img src="assets/Graphic Icon Dark.svg" alt="Graphic" class="text-center img-fluid py-2"
+                                    style="width: 50px;">
+                            </center>
+                            <p class="sub-title-dark text-center">Design Projects</p>
+                            <p class="text-center heading-dark counter" data-target="700">0</p>
+                        </div>
+                        <!-- <div class="col-lg-1 text-center" style="background-color: var(--grey-col);">
 
                     </div> -->
-                    <div class="col-lg-5">
-                        <center>
-                            <img src="assets/Code Icon Dark.svg" alt="Graphic" class="text-center py-2 img-fluid"
-                                style="width: 50px;">
-                        </center>
-                        <p class="sub-heading-dark text-center">Web Dev Projects</p>
-                        <p class="counter text-center heading-dark counter" data-target="8">0</p>
+                        <div class="col-lg-5">
+                            <center>
+                                <img src="assets/Code Icon Dark.svg" alt="Graphic" class="text-center py-2 img-fluid"
+                                    style="width: 50px;">
+                            </center>
+                            <p class="sub-title-dark text-center">Web Dev Projects</p>
+                            <p class="counter text-center heading-dark counter" data-target="8">0</p>
+                        </div>
                     </div>
+
                 </div>
-                <div class="row pt-2">
-                    <center>
-                        <img src="assets/aiproductions-hero-devices.svg" alt="devices" class="text-center img-fluid"
-                            style="width: 60vw;">
-                    </center>
+            </section>
+
+
+
+
+
+            <!--Recent Work-->
+            <section class="recent-work-section container py-5">
+                <p class="sub-heading text-center">Recent Projects</p>
+                <div class="folio-container py-5">
+                    <div class="folio-content">
+                        <div class="card-image">
+                            <img src="assets/savanna-relaxations-preview.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-title">
+                            <p class="sub-title">Title</p>
+                        </div>
+                        <div class="gradient-fade"></div>
+                    </div>
+                    <div class="folio-content g-col"></div>
+                    <div class="folio-content g-col"></div>
                 </div>
-            </div>
-        </section>
 
-
-        <!--Portfolio-->
-        <!-- <section class="portfolio-section container-fluid">
-            <p class="heading text-center pt-5 " style="font-size: 50px; text-align: center;">My Work</p>
-
-            <div class="py-5 px-5 portfolio">
+                <!-- <div class=" px-5 portfolio">
                 <a href="https://savannarelaxations.vercel.app/" target="_blank" class="portfolio-link-card fadeIn">
-                    <div class="portfolio-content">
+                    <div class="portfolio-content col-lg-4 col">
                         <img src="assets/savanna-relaxations-preview.jpg" alt="Savanna Relaxations"
-                            class="p-2 portfolio-image">
+                            class="p-2 portfolio-image img-fluid ">
 
                         <div class="portfolio-card-body interactive pt-5">
                             <p class="sub-heading text-center">Savanna Relaxations</p>
@@ -356,8 +354,8 @@
                 </a>
 
                 <a href="#" target="_blank" class="portfolio-link-card fadeIn">
-                    <div class="portfolio-content">
-                        <img src="assets/plant-palance-preview.jpg" alt="Plant Palace" class="p-2 portfolio-image">
+                    <div class="portfolio-content col-lg-4 col">
+                        <img src="assets/plant-palance-preview.jpg" alt="Plant Palace" class="p-2 portfolio-image img-fluid">
 
                         <div class="portfolio-card-body interactive pt-5">
                             <p class="sub-heading text-center">Plant Palace</p>
@@ -370,8 +368,8 @@
                 </a>
 
                 <a href="#" target="_blank" class="portfolio-link-card fadeIn">
-                    <div class="portfolio-content">
-                        <img src="assets/alberto-watches-preview.jpg" alt="Alberto Watches" class="p-2 portfolio-image">
+                    <div class="portfolio-content col-lg-4 col">
+                        <img src="assets/alberto-watches-preview.jpg" alt="Alberto Watches" class="p-2 portfolio-image img-fluid">
 
                         <div class="portfolio-card-body interactive pt-5">
                             <p class="sub-heading text-center">Alberto Watches</p>
@@ -384,8 +382,8 @@
                 </a>
 
                 <a href="#" target="_blank" class="portfolio-link-card fadeIn">
-                    <div class="portfolio-content">
-                        <img src="assets/puerlix-bank-preview.jpg" alt="Purelix Bank" class="p-2 portfolio-image">
+                    <div class="portfolio-content col-lg-4 col">
+                        <img src="assets/puerlix-bank-preview.jpg" alt="Purelix Bank" class="p-2 portfolio-image img-fluid">
 
                         <div class="portfolio-card-body interactive pt-5">
                             <p class="sub-heading text-center">Purelix Bank</p>
@@ -397,153 +395,143 @@
                     </div>
                 </a>
 
-            </div>
-        </section> -->
+            </div> -->
+            </section>
 
 
-        <!--Customer Review Section-->
-        <section class="customer-reviews ">
-            <div class="container px-4 py-5" id="featured-3">
-                <h1 class="pb-2 heading-dark text-center">Cutomer Reviews</h1>
-                <!--Customer Review Carousels-->
-                <div id="carouselcustomerrev" class="carousel slide col-12" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselcustomerrev" data-bs-slide-to="0" class="active"
-                            aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselcustomerrev" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
+
+            <section class="clients py-5">
+                <p class="sub-title text-center py-3">Top Brands I've Worked With</p>
+                <div class="scroller">
+                    <div class="scroller-inner d-flex gap-4 justify-content-center tag-list ">
+                        <li class="tags"><img class="client-logo img-fluid" src="assets/client logos/1.png" alt=""></li>
+                        <li class="tags"><img class="client-logo img-fluid" src="assets/client logos/2.png" alt=""></li>
+                        <li class="tags"><img class="client-logo img-fluid" src="assets/client logos/3.png" alt=""></li>
+                        <li class="tags"><img class="client-logo img-fluid" src="assets/client logos/4.png" alt=""></li>
+                        <li class="tags"><img class="client-logo img-fluid" src="assets/client logos/5.png" alt=""></li>
+                        <li class="tags"><img class="client-logo img-fluid" src="assets/client logos/6.png" alt=""></li>
+                        <li class="tags"><img class="client-logo img-fluid" src="assets/client logos/7.png" alt=""></li>
+                        <li class="tags"><img class="client-logo img-fluid" src="assets/client logos/8.png" alt=""></li>
+                        <li class="tags"><img class="client-logo img-fluid" src="assets/client logos/9.png" alt=""></li>
+                        <li class="tags"><img class="client-logo img-fluid" src="assets/client logos/10.png" alt="">
+                        </li>
+                        <li class="tags"><img class="client-logo img-fluid" src="assets/client logos/11.png" alt="">
+                        </li>
+                        <li class="tags"><img class="client-logo img-fluid" src="assets/client logos/12.png" alt="">
+                        </li>
+                        <li class="tags"><img class="client-logo img-fluid" src="assets/client logos/13.png" alt="">
+                        </li>
+                        <li class="tags"><img class="client-logo img-fluid" src="assets/client logos/14.png" alt="">
+                        </li>
+                        <li class="tags"><img class="client-logo img-fluid" src="assets/client logos/15.png" alt="">
+                        </li>
+                        <li class="tags"><img class="client-logo img-fluid" src="assets/client logos/16.png" alt="">
+                        </li>
+                        <li class="tags"><img class="client-logo img-fluid" src="assets/client logos/17.png" alt="">
+                        </li>
+                        <li class="tags"><img class="client-logo img-fluid" src="assets/client logos/18.png" alt="">
+                        </li>
+                        <li class="tags"><img class="client-logo img-fluid" src="assets/client logos/19.png" alt="">
+                        </li>
+                        <li class="tags"><img class="client-logo img-fluid" src="assets/client logos/20.png" alt="">
+                        </li>
+                        <li class="tags"><img class="client-logo img-fluid" src="assets/client logos/21.png" alt="">
+                        </li>
+
                     </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-                                <div class="feature col">
-                                    <div
-                                        class="feature-icon d-inline-flex align-items-center justify-content-center sub-title mb-3">
-                                        <img src="image/Bernard.png" alt="Bernard" height="50px" width="50px">
-                                    </div>
-                                    <h3 class="sub-heading-dark">Bernard Wilson</h3>
-                                    <p class="paragraph-dark">I would strongly urge anyone seeking a beach escape to
-                                        consider Savanna
-                                        Relaxations
-                                        for its exceptional views, top-tier amenities, and outstanding service. Five
-                                        star
-                                        services.</p>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
+                </div>
+            </section>
 
-                                <div class="feature col">
-                                    <div
-                                        class="feature-icon d-inline-flex align-items-center justify-content-center sub-title mb-3">
-                                        <img src="image/Joanne.png" alt="Joanne" height="50px" width="50px">
-                                    </div>
-                                    <h3 class="sub-heading-dark">Joanne Silva</h3>
-                                    <p class="paragraph-dark">Savanna Relaxations provided an amazing beach vacation
-                                        with breathtaking views,
-                                        exceptional service, and luxurious amenities. Highly recommended!</p>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
 
-                                <div class="feature col">
+
+            <!--Customer Review Section-->
+            <section class="customer-reviews ">
+                <div class="container py-5" id="featured-3">
+                    <h1 class="sub-heading text-center">Testimonials</h1>
+
+                    <!--Customer Review Carousels-->
+                    <div id="carouselcustomerrev" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselcustomerrev" data-bs-slide-to="0"
+                                class="active carousel-indicators-button" aria-current="true"
+                                aria-label="Slide 1"></button>
+                            <button type="button" class="carousel-indicators-button"
+                                data-bs-target="#carouselcustomerrev" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                        </div>
+
+
+                        <div class="carousel-inner">
+
+                            <div class="carousel-item active">
+                                <div class="py-5 ">
                                     <div
-                                        class="feature-icon d-inline-flex align-items-center justify-content-center sub-title mb-3">
-                                        <img src="image/Lydia.png" alt="Bernard" height="50px" width="50px">
+                                        class="review text-center text-lg-start d-lg-flex justify-content-center gap-5">
+                                        <div>
+                                            <img src="assets/profile pictures/dp1.jpg" class="img-fluid testimonial-dp"
+                                                alt="">
+                                            <h3 class="sub-title py-3" style="max-width: 30px;">Bernard Wilson</h3>
+                                        </div>
+                                        <div class="review-text">
+                                            <p class="paragraph">I’m thrilled with the website Israel
+                                                created for my business. They were professional, communicative, and
+                                                delivered on time. The design is modern, fast, and looks great on all
+                                                devices. I’ve received so many compliments from my customers. Thank you!
+                                            </p>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
                                     </div>
-                                    <h3 class="sub-heading-dark">Lydia George</h3>
-                                    <p class="paragraph-dark">Savanna Relaxations is the perfect destination for a beach
-                                        vacation -
-                                        breathtaking
-                                        views, impeccable service, and luxurious amenities. I absolutely loved it!</p>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="py-5 ">
+                                    <div
+                                        class="review text-center text-lg-start d-lg-flex justify-content-center gap-5">
+                                        <div>
+                                            <img src="assets/profile pictures/dp2.jpg" class="img-fluid testimonial-dp"
+                                                alt="">
+                                            <h3 class="sub-title py-3" style="max-width: 30px;">Emmanuel Olagoke</h3>
+                                        </div>
+                                        <div class="review-text">
+                                            <p class="paragraph">Hiring aiprodcutions was the best decision for my
+                                                project! They transformed my ideas into a beautiful, functional website
+                                                that exceeded my expectations. The attention to detail and
+                                                responsiveness were outstanding. Highly recommend for anyone needing a
+                                                skilled front-end developer!</p>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
-                            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-                                <div class="feature col">
-                                    <div
-                                        class="feature-icon d-inline-flex align-items-center justify-content-center sub-title mb-3">
-                                        <img src="image/Nicholas.png" alt="Bernard" height="50px" width="50px">
-                                    </div>
-                                    <h3 class="sub-heading-dark">Nicholas David</h3>
-                                    <p class="paragraph-dark">Hey guys, I went to Savanna Relaxations and it was sooo
-                                        cool! The water was super
-                                        clear and the sand was soft. The people there were really nice and made sure I
-                                        had
-                                        everything I needed. They even had yummy food and drinks! I had a blast and I
-                                        totally recommend it for a fun beach day!</p>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-
-                                <div class="feature col">
-                                    <div
-                                        class="feature-icon d-inline-flex align-items-center justify-content-center sub-title mb-3">
-                                        <img src="image/Celine.png" alt="Joanne" height="50px" width="50px">
-                                    </div>
-                                    <h3 class="sub-heading-dark">Celine Howard</h3>
-                                    <p class="paragraph-dark">Savanna Relaxations delivered an unforgettable beach
-                                        getaway with spectacular
-                                        ocean
-                                        vistas, outstanding service, and top-notch amenities. Highly recommend it.</p>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-
-                                <div class="feature col">
-                                    <div
-                                        class="feature-icon d-inline-flex align-items-center justify-content-center sub-title mb-3">
-                                        <img src="image/sayo akinlami.png" alt="Bernard" height="50px" width="50px">
-                                    </div>
-                                    <h3 class="sub-heading-dark">Sayo Akinlami</h3>
-                                    <p class="paragraph-dark">Hey everyone! I visited Savanna Relaxations with my
-                                        friends, and we had a blast.
-                                        The
-                                        beach was so beautiful and relaxing, and the staff made us feel right at home.
-                                        We
-                                        loved trying the local food and drinks too. Highly recommend it!</p>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star-half-stroke"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselcustomerrev"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon visually-hidden" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselcustomerrev"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon visually-hidden" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div><!-- Customer Review Carousel-->
-            </div>
-        </section>
 
 
-        <!-- <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselcustomerrev"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon visually-hidden" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselcustomerrev"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon visually-hidden" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div><!-- Customer Review Carousel-->
+                </div>
+            </section>
+
+
+            <!-- <div class="toast-container position-fixed bottom-0 end-0 p-3">
             <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
                 <div class="toast-header">
                     <img src="assets/AI Productions Logo Secondary.png" class="rounded me-2" alt="AI Productions"
@@ -555,10 +543,10 @@
                 </div>
             </div>
         </div> -->
-        <!--Toast-->
+            <!--Toast-->
 
 
-        <!-- <section class="project-section text-center">
+            <!-- <section class="project-section text-center">
             <h1 class="heading c-p animate__animated animate__fadeInRight">CREATIVE PROJECTS</h1>
             <div class="col-lg-6 mx-auto">
                 <p class="paragraph">Here's a collection of most of my work in <a href="#"
@@ -566,37 +554,45 @@
                         Development</a> </p>
             </div>
         </section> -->
-        <section id="enquiry-form-section" class="enquiry-form py-5 ">
-            <div class="container-fluid py-5">
-                <div class="form-card m-auto col-lg-8 col-sm-10 px-5 py-5">
-                    <p class="heading text-center pt-5 " style="font-size: 50px; text-align: center;">Send
-                        me a
-                        message!</p>
-                    <p class="sub-heading text-center" style="font-size: 18px;">Got something on your mind? Whether
-                        it's a question, <br>proposal, or a cheerful hello, we're all ears <span
-                            style="color: var(--prycol);">!</span></p>
 
-                    <div class="container text-center">
-                        <div class="row d-lg-flex justify-content-center">
-                            <input type="text" id="enquiry-name"
-                                class="col-sm-6 col-lg-5 enq-form-name mx-4 px-2 my-1 paragraph"
-                                placeholder="Your name">
 
-                            <input type="email" id="enquiry-email"
-                                class="col-sm-6 col-lg-5 enq-form-email mx-4 px-2 my-1 paragraph"
-                                placeholder="Your email address">
+
+
+
+            <!-- Contact Form -->
+
+            <!-- <section id="enquiry-form-section" class="enquiry-form py-5 ">
+                <div class="container-fluid py-5">
+                    <div class="form-card m-auto col-lg-8 col-sm-10 px-5 py-5">
+                        <p class="heading text-center pt-5 " style="font-size: 50px; text-align: center;">Send
+                            me a
+                            message!</p>
+                        <p class="sub-heading text-center" style="font-size: 18px;">Got something on your mind? Whether
+                            it's a question, <br>proposal, or a cheerful hello, we're all ears <span
+                                style="color: var(--prycol);">!</span></p>
+
+                        <div class="container text-center">
+                            <div class="row d-lg-flex justify-content-center">
+                                <input type="text" id="enquiry-name"
+                                    class="col-sm-6 col-lg-5 enq-form-name mx-4 px-2 my-1 paragraph"
+                                    placeholder="Your name">
+
+                                <input type="email" id="enquiry-email"
+                                    class="col-sm-6 col-lg-5 enq-form-email mx-4 px-2 my-1 paragraph"
+                                    placeholder="Your email address">
+                            </div>
+                            <div class="row d-flex justify-content-center mb-4">
+                                <textarea id="enq-description"
+                                    class="paragraph enq-form-message my-1 px-2 mx-2 container"
+                                    placeholder="Write your message" rows="10"></textarea>
+                            </div>
+
+                            <a href="#" class="btn-sec interactive px-lg-4 py-lg-2 px-2 interactive"> SEND MESSAGE <span
+                                    class="right-arrow"><i class="fa-solid fa-arrow-right"></i></span> </a>
                         </div>
-                        <div class="row d-flex justify-content-center mb-4">
-                            <textarea id="enq-description" class="paragraph enq-form-message my-1 px-2 mx-2 container"
-                                placeholder="Write your message" rows="10"></textarea>
-                        </div>
-
-                        <a href="#" class="btn-sec interactive px-lg-4 py-lg-2 px-2 interactive"> SEND MESSAGE <span
-                                class="right-arrow"><i class="fa-solid fa-arrow-right"></i></span> </a>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section> -->
     </div>
 
 
@@ -619,7 +615,7 @@
     <!-- AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init();
+        AOS.init();
     </script>
 
 
@@ -638,3 +634,9 @@
 </body>
 
 </html>
+
+
+
+<!-- <spline-viewer url="https://prod.spline.design/LEvjG3OETYd2GsRw/scene.splinecode"
+    class="d-block mx-lg-auto img-fluid spline animate__animated animate__fadeInRight"
+    width="700" height="500"></spline-viewer> -->
