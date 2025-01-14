@@ -170,16 +170,17 @@
             <!--Intro Section-->
             <section class="container intro-section">
                 <div class="row ">
-                    <div class="col-lg-6">
-                        <p class="heading animate__animated animate__fadeInUp pt-5 text-upper">Akintunde<br>Israel
+                    <div class="col-lg-6 pt-4">
+                        <!-- <p class="paragraph px-2" style="font-size: 12px;">Hi there 👋 , I’m</p> -->
+                        <p class="paragraph px-2" style="font-size: 12px;">Hello 👋 , I’m</p>
+                        <p class="heading animate__animated animate__fadeInUp text-upper">Akintunde<br>Israel
                         </p>
                         <p class="sub-title animate__animated animate__fadeInUp animate__delay-1s">Creative Designer &
                             Front-End Developer<span style="color: var(--prycol);">.</span></p>
                         <div class="animate__animated animate__fadeInUp animate__delay-1s">
                             <p class="paragraph">
-                                I'm a creative designer and innovative developer. I blend visual
-                                aesthetics to craft captivating designs and build visually appealing front-end with
-                                code.
+                                I'm a creative designer and innovative developer.
+                                <!-- I blend visual aesthetics to craft captivating designs and build visually appealing front-end with code. -->
                                 Let me bring your vision to life!
                             </p>
                         </div>
@@ -210,10 +211,12 @@
                     building and
                     designing for the Web for over 2 years as well.
                     I am a passionate about creative solutions for brands & individuals.
-                    wether its design or development i make sure to put in the best to make the project come out on top.
+                </p>
+
+                <!-- wether its design or development i make sure to put in the best to make the project come out on top.
                     Performance, Aesthetics, Excellent User Experince are all covered when you bring me on board.
                     My aim is to bring across your message and identity in the most creative way. You can trust that you
-                    have the right guy on your team</p>
+                    have the right guy on your team -->
 
                 <!-- Design -->
                 <div class="row justify-content-center py-5 px-3">
@@ -229,16 +232,16 @@
                         <div class=" mt-lg-5">
                             <p class="sub-title">My Design Tools & Skills<span style="color: var(--prycol);">.</span>
                             </p>
-                            <div class="d-flex flex-wrap gap-1" style="padding: 0; margin: 0;">
+                            <div class="d-flex flex-wrap gap-2 " style="padding: 0; margin: 0;">
                                 <p class="paragraph tools">Adobe Photoshop</p>
                                 <p class="paragraph tools">Adobe Illustrator</p>
                                 <p class="paragraph tools">Figma</p>
                                 <p class="paragraph tools">Corel Draw</p>
-                                <p class="paragraph tools">Corporate Design</p>
-                                <p class="paragraph tools">Event Design</p>
-                                <p class="paragraph tools">Social Media Design</p>
-                                <p class="paragraph tools">Posters</p>
                                 <p class="paragraph tools">Brand Identity</p>
+                                <p class="paragraph tools">Event Design</p>
+                                <p class="paragraph tools">Corporate Design</p>
+                                <p class="paragraph tools">Posters</p>
+                                <p class="paragraph tools">Social Media Design</p>
                                 <p class="paragraph tools">Logo Design</p>
                                 <p class="paragraph tools">UI/UX</p>
                             </div>
@@ -261,7 +264,7 @@
                         <div class=" mt-lg-5">
                             <p class="sub-title">My Software Development Toolkit<span
                                     style="color: var(--prycol);">.</span></p>
-                            <div class="d-flex flex-wrap gap-1" style="padding: 0; margin: 0;">
+                            <div class="d-flex flex-wrap gap-2" style="padding: 0; margin: 0;">
                                 <p class="paragraph tools">HTML</p>
                                 <p class="paragraph tools">CSS</p>
                                 <p class="paragraph tools">Javacscript</p>
@@ -323,18 +326,43 @@
             <!--Recent Work-->
             <section class="recent-work-section container py-5">
                 <p class="sub-heading text-center">Recent Projects</p>
-                <div class="folio-container py-5">
-                    <div class="folio-content">
-                        <div class="card-image">
-                            <img src="assets/savanna-relaxations-preview.jpg" class="img-fluid" alt="">
-                        </div>
-                        <div class="card-title">
-                            <p class="sub-title">Title</p>
-                        </div>
-                        <div class="gradient-fade"></div>
+
+
+                <div class="card-container row py-2">
+
+                    <div class="col-lg-4">
+                        <a href="http://" target="_blank" class="portfolio-link">
+                            <div class="cardd" style="background-image: url(assets/plant-palance-preview.jpg);">
+                                <div class="card-content">
+                                    <p class="card-title sub-title">Plant Palace</p>
+                                    <p class="card-body paragraph">Web Development</p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                    <div class="folio-content g-col"></div>
-                    <div class="folio-content g-col"></div>
+
+                    <div class="col-lg-4">
+                        <a href="http://" target="_blank" class="portfolio-link">
+                            <div class="cardd" style="background-image: url(assets/alberto-watches-preview.jpg);">
+                                <div class="card-content">
+                                    <p class="card-title sub-title">Alberto Watches</p>
+                                    <p class="card-body paragraph">Web Development</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <a href="https://savannarelaxations.vercel.app/" target="_blank" class="portfolio-link">
+                            <div class="cardd" style="background-image: url(assets/savanna-relaxations-preview.jpg);">
+                                <div class="card-content">
+                                    <p class="card-title sub-title">Savanna Relaxations</p>
+                                    <p class="card-body paragraph">Web Development</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
                 </div>
 
                 <!-- <div class=" px-5 portfolio">
@@ -450,7 +478,7 @@
                     <h1 class="sub-heading text-center">Testimonials</h1>
 
                     <!--Customer Review Carousels-->
-                    <div id="carouselcustomerrev" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div id="carouselcustomerrev" class="carousel slide " data-bs-ride="carousel">
 
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselcustomerrev" data-bs-slide-to="0"
@@ -471,7 +499,7 @@
                                         <div>
                                             <img src="assets/profile pictures/dp1.jpg" class="img-fluid testimonial-dp"
                                                 alt="">
-                                            <h3 class="sub-title py-3" style="max-width: 30px;">Bernard Wilson</h3>
+                                            <h3 class="sub-title py-3">Bernard W.</h3>
                                         </div>
                                         <div class="review-text">
                                             <p class="paragraph">I’m thrilled with the website Israel
@@ -496,7 +524,7 @@
                                         <div>
                                             <img src="assets/profile pictures/dp2.jpg" class="img-fluid testimonial-dp"
                                                 alt="">
-                                            <h3 class="sub-title py-3" style="max-width: 30px;">Emmanuel Olagoke</h3>
+                                            <h3 class="sub-title py-3">Emmanuel O.</h3>
                                         </div>
                                         <div class="review-text">
                                             <p class="paragraph">Hiring aiprodcutions was the best decision for my

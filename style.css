@@ -200,22 +200,22 @@ a.nav-link:active::after {
 /* Typographica heading and sub-heading */
 .heading {
   font-family: var(--heading);
-  font-size: 70px;
+  font-size: 60px;
   color: var(--prycol);
-  line-height: 4rem;
+  line-height: 3.5rem;
 }
 
 .heading-dark {
   font-family: var(--heading);
-  font-size: 70px;
+  font-size: 60px;
   color: var(--grey-col);
-  line-height: 4rem;
+  line-height: 3.5rem;
 
 }
 
 .sub-heading {
   font-family: var(--heading);
-  font-size: 50px;
+  font-size: 40px;
   color: var(--prycol);
   line-height: 3rem;
 
@@ -223,7 +223,7 @@ a.nav-link:active::after {
 
 .sub-heading-dark {
   font-family: var(--heading);
-  font-size: 50px;
+  font-size: 40px;
   line-height: 3rem;
 
 }
@@ -250,10 +250,10 @@ a.nav-link:active::after {
   font-family: var(--paragraph);
   color: white;
   font-size: 14px;
-  font-weight: 200;
+  font-weight: 300;
   line-height: 1.7rem;
   letter-spacing: 0.5px;
-  opacity: 0.85;
+  opacity: 0.95;
 
 }
 
@@ -266,6 +266,28 @@ a.nav-link:active::after {
   line-height: 1.7rem;
 }
 
+/* If the screen size is smaller than 991px, adjust the font-sizes*/
+@media (max-width: 991px) {
+  .heading, .heading-dark {
+    font-size: 50px;
+  }
+
+  .sub-heading, .sub-heading-dark {
+    font-size: 30px;
+  }
+
+  .sub-title, .sub-heading-dark {
+    font-size: 16px;
+  }
+
+  .paragraph, .paragraph-dark {
+    font-size: 12px;
+  }
+
+  .israel-img {
+    height: 350px;
+  }
+}
 
 
 
@@ -396,18 +418,16 @@ a.nav-link:active::after {
 .tools {
   font-size: 12px;
   padding: 0.3rem 0.8rem;
+  margin: 0;
   border-radius: 3px;
   background-color: #222222;
   transition: all ease-in-out 0.3s;
 }
 
-.tool-imgs {
-  height: 40px;
-  transition: all ease-in-out 0.5s;
 
-  &:hover {
-    transform: translateY(-4px);
-    transform: scale(1.1);
+@media (max-width: 991px) {
+  .tools {
+    font-size: 10px;
   }
 }
 
@@ -451,6 +471,19 @@ a.nav-link:active::after {
   transition: all ease-in-out 0.3s;
   cursor: url(assets/aicursordark.png), auto;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .enquiry-form {
   cursor: url(assets/aicursor.png), auto;
@@ -534,23 +567,13 @@ a.nav-link:active::after {
   display: none;
 }
 
-/* If the screen size is 1200px wide or more, set the font-size to 80px */
-@media (min-width: 1200px) {
-  .responsive-font-example {
-    font-size: 80px;
-  }
-}
 
-/* If the screen size is smaller than 1200px, set the font-size to 80px */
-@media (max-width: 1199.98px) {
-  .heading {
-    font-size: 50px;
-  }
 
-  .israel-img {
-    height: 350px;
-  }
-}
+
+
+
+
+
 
 
 
@@ -559,46 +582,59 @@ a.nav-link:active::after {
   padding-inline: 3em;
 }
 
-
-.folio-container {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  justify-content: center;
-}
-
-.folio-content {
-  display: block;
-  position: relative;
-  height: fit-content;
+.cardd {
+  
+  background-size: cover;
+  padding: 8rem 0 0 ;
+  max-width: 35ch;
+  aspect-ratio: 3/2;
+  border-radius: 5px;
   overflow: hidden;
-  border-radius: 3px;
-}
-
-.card-image > img {
-  width: max-content;
+  transition: transform 0.5s ease;
 }
 
 .card-title {
-  position: relative;
-  bottom: -40px;
-  left: 0;
-  z-index: 999;
+  opacity: 0;
+  transition: opacity .5s ease-in-out .25s;
 }
 
-.folio-content:hover > .card-title {
-  bottom: 40px;
+.card-body {
+  opacity: 0;
+  transition: opacity .5s ease-in-out .35s;
+}
+
+.card-content {
+  transform: translateY(100%);
+  padding: 1.5em;
+  height: 120px;
+  background:linear-gradient(
+    transparent,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.8),
+    black
+  );
+  transition: transform 0.5s ease;
 
 }
-.gradient-fade {
-  position: absolute;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  /* background-color: linear-gradient(#181818, transparent); */
-  background-color: #f9d801;
+.cardd:hover .card-content {
+  transform: translateY(-10%);
   
 }
+
+.cardd:hover .card-title {
+  opacity: 1;
+}
+
+.cardd:hover .card-body {
+  opacity: 1;
+}
+
+.portfolio-link {
+  text-decoration: none;
+}
+
+
+
 
 
 
@@ -669,7 +705,13 @@ a.nav-link:active::after {
 }
 
 .review-text > p {
-  max-width: 40vw;
+  width: 40vw;
+}
+
+@media (max-width: 991px) {
+  .review-text > p {
+    width: 70vw;
+  }
 }
 
 .fa-star {
