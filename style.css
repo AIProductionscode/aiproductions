@@ -51,19 +51,12 @@
 
 body {
   background-image: linear-gradient(90deg, #181818, #161616);
-  /* background-image: url(assets/Background\ 2.jpg); */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   transition: all ease-in-out 0.3s;
   cursor: url(assets/aicursor.png), auto;
 }
-
-
-
-
-
-
 
 
 
@@ -347,6 +340,7 @@ a.nav-link:active::after {
 }
 
 .btn-sec {
+  padding: 0.7rem 1.5rem;
   position: relative;
   font-weight: 600;
   font-family: var(--paragraph);
@@ -484,13 +478,182 @@ a.nav-link:active::after {
 
 
 
+.recent-work-section {
+  padding-inline: 3em;
+}
+
+.portfolio-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  justify-content: center;
+}
+
+.cardd {
+  background-size: cover;
+  padding: 8rem 0 0 ;
+  aspect-ratio: 16/9;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top center;
+}
+
+.card-title {
+  line-height: 1rem;
+  margin: 0;
+  opacity: 0;
+  transition: opacity .5s ease-in-out .25s;
+}
+
+.card-body {
+  margin: 0;  
+  opacity: 0;
+  transition: opacity .5s ease-in-out .35s;
+}
+
+.card-content {
+  transform: translateY(100%);
+  padding: 1.5em;
+  height: 120px;
+  background:linear-gradient(
+    transparent,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.8),
+    black
+  );
+  transition: transform 0.5s ease;
+
+}
+
+.cardd:hover{
+  border: 1px solid var(--prycol);
+  background-size: 102%;
+}
+
+.cardd:hover .card-content {
+  transform: translateY(-20%);
+  
+}
+
+.cardd:hover .card-title {
+  opacity: 1;
+}
+
+.cardd:hover .card-body {
+  opacity: 1;
+}
+
+.portfolio-link {
+  text-decoration: none;
+  cursor: url(assets/aicursor\ pointer.png), pointer;
+}
+
+
+
+
+
+
+
+
+/* Clients i've worked with */
+
+.scroller {
+  margin: auto;
+  max-width: 60vw;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller[data-animated="true"] .scroller-inner {
+  flex-wrap: nowrap;
+  animation: scrolling-logo 60s linear infinite;
+  width: max-content;
+}
+
+@keyframes scrolling-logo {
+  to {
+    transform: translate(calc(-50% + 0.8rem));
+  }
+}
+
+.tags {
+  margin: 0;
+  list-style: none;
+}
+
+.client-logo {
+  height: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.customer-reviews {
+  padding-inline: 3rem;
+}
+
+.testimonial-dp {
+  height: 100px;
+  border-radius: 3px;
+}
+
+.review-text > p {
+  width: 40vw;
+}
+
+@media (max-width: 991px) {
+  .review-text > p {
+    width: 70vw;
+  }
+}
+
+.fa-star {
+  color: var(--prycol);
+}
+
+
+.carousel-indicators-button {
+  height: 7px !important;
+  width: 7px !important;
+  border-radius: 50%;
+  background-color: transparent !important;
+  border: 2px solid var(--prycol) !important;
+
+}
+.carousel-indicators > .active {
+  background-color: var(--prycol) !important;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .enquiry-form {
   cursor: url(assets/aicursor.png), auto;
-  background-image: url(assets/Background\ 2.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   transition: all ease-in-out 0.3s;
   cursor: url(assets/aicursor.png), auto;
 }
@@ -570,173 +733,68 @@ a.nav-link:active::after {
 
 
 
-
-
-
-
-
-
-
-
-.recent-work-section {
-  padding-inline: 3em;
-}
-
-.cardd {
-  
-  background-size: cover;
-  padding: 8rem 0 0 ;
-  max-width: 35ch;
-  aspect-ratio: 3/2;
-  border-radius: 5px;
-  overflow: hidden;
-  transition: transform 0.5s ease;
-}
-
-.card-title {
-  opacity: 0;
-  transition: opacity .5s ease-in-out .25s;
-}
-
-.card-body {
-  opacity: 0;
-  transition: opacity .5s ease-in-out .35s;
-}
-
-.card-content {
-  transform: translateY(100%);
-  padding: 1.5em;
-  height: 120px;
-  background:linear-gradient(
-    transparent,
-    rgba(0, 0, 0, 0.4),
-    rgba(0, 0, 0, 0.8),
-    black
-  );
-  transition: transform 0.5s ease;
-
-}
-.cardd:hover .card-content {
-  transform: translateY(-10%);
-  
-}
-
-.cardd:hover .card-title {
-  opacity: 1;
-}
-
-.cardd:hover .card-body {
-  opacity: 1;
-}
-
-.portfolio-link {
-  text-decoration: none;
-}
-
-
-
-
-
-
-
-
-/* Clients i've worked with */
-
-.scroller {
+hr {
+  color: rgba(255, 255, 255, 0.44);
+  width: 80vw;
   margin: auto;
-  max-width: 60vw;
 }
 
-.scroller[data-animated="true"] {
-  overflow: hidden;
-  -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-}
-
-.scroller[data-animated="true"] .scroller-inner {
-  flex-wrap: nowrap;
-  animation: scrolling-logo 60s linear infinite;
-  width: max-content;
-}
-
-@keyframes scrolling-logo {
-  to {
-    transform: translate(calc(-50% + 0.8rem));
-  }
-}
-
-.tags {
-  margin: 0;
-  list-style: none;
-}
-
-.client-logo {
-  height: 35px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.customer-reviews {
+.footer {
   padding-inline: 3rem;
 }
 
-.testimonial-dp {
-  height: 100px;
-  border-radius: 3px;
+.footer-icon {
+  height: 70px;
+  transition: all ease-in-out 0.3s;
 }
 
-.review-text > p {
-  width: 40vw;
+.footer-icon:hover {
+  filter: drop-shadow(0px 0px 25px #f9d801);
+  cursor: url(assets/aicursor\ pointer.png), pointer;
 }
 
-@media (max-width: 991px) {
-  .review-text > p {
-    width: 70vw;
-  }
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 }
 
-.fa-star {
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+}
+
+.footer-logo:hover {
+  filter: drop-shadow(0px 0px 25px #f9d801);
+  cursor: url(assets/aicursor\ pointer.png), pointer;
+}
+
+.footer-paragraph {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.1rem;
+  transition: all ease-in-out 0.2s;
+  text-decoration: underline dotted;
+
+}
+
+.footer-paragraph:hover  {
   color: var(--prycol);
 }
 
 
-.carousel-indicators-button {
-  height: 7px !important;
-  width: 7px !important;
-  border-radius: 50%;
-  background-color: transparent !important;
-  border: 2px solid var(--prycol) !important;
-
-}
-.carousel-indicators > .active {
-  background-color: var(--prycol) !important;
-
+.footer-socials {
+  font-size: 24px;
+  color: white;
+  opacity: 0.8;
+  transition: all ease-in-out 0.2s;
 }
 
-
-
-
-
-
+.footer-socials:hover {
+  opacity: 1;
+  color: var(--prycol);
+}
 
 
 

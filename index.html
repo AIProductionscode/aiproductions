@@ -17,6 +17,7 @@
     <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
+
     <!-- CSS File     -->
     <link rel="stylesheet" href="style.css">
 
@@ -35,22 +36,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
+    <!-- Moment Live Chat -->
+    <script src="https://www.momentcrm.com/embed"></script>
+    <script>
+        MomentCRM('init', {
+            'teamVanityId': 'aiproductions',
+            'doChat': true,
+            'doTimeTravel': true,
+            'quadClickForFeedback': true,
+        });
+    </script>
+
 </head>
 
 <body>
 
+
     <div class="container d-flex justify-content-center "
-        style="position: absolute; top: 50%; left: 50%; transform: translateX(-50%);">
-        <button class="enter btn-sec interactive px-lg-4 py-lg-2 px-2 py-2 pulse">Lets Go</button>
+    style="position: absolute; top: 50%; left: 50%; transform: translateX(-50%);">
+    <button class="enter btn-sec interactive px-lg-4 py-lg-2 px-2 py-2 pulse">Lets Go</button>
     </div>
 
     <div class="welcome">
-        <!-- Opening Music -->
-        <audio>
-            <source src="audio/opening.mp3">
-            </source>
-        </audio>
-
         <div class="container-fluid ">
             <div class="row">
                 <p class="sub-title text-center welcome-text">Welcome to</p>
@@ -95,9 +102,13 @@
 
 
     <!-- Loading Animation -->
-    <div class="spinner" id="spinner">
-        <img src="assets/Ai Productions Icon.png" class="spinner-img" alt="Loader">
-    </div>
+  
+       <div class="spinner" id="spinner">
+            <img src="assets/Ai Productions Icon.png" class="spinner-img" alt="Loader">
+        </div>
+
+    <!-- <div style="height: 100vh; width: 100vw;" class="bg-placeholder"></div> -->
+
 
     <div class="web-content">
 
@@ -106,7 +117,7 @@
         </div>
 
         <!--Landing Page Section-->
-        <section class="body pb-5">
+        <section class="body">
             <!-- Navigation -->
             <nav id="navbar"
                 class="navbar navbar-expand-lg px-4 animate__animated animate__fadeInDown animate__delay-2s"
@@ -136,29 +147,19 @@
 
                         <span class="d-flex">
                             <li class="nav-item px-lg-2 px-4">
-                                <a href="https://www.instagram.com/aiproductionsdesign" class="nav-link interactive"
-                                    data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                    data-bs-title="Visit my Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/aiproductionsdesign" class="nav-link interactive"><i class="fa-brands fa-instagram"></i></a>
                             </li>
                             <li class="nav-item px-lg-2 px-4">
-                                <a href="https://www.facebook.com/aiprodcutions" class="nav-link interactive"
-                                    data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                    data-bs-title="Visit my Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="https://www.facebook.com/aiprodcutions" class="nav-link interactive"><i class="fa-brands fa-facebook-f"></i></a>
                             </li>
                             <li class="nav-item px-lg-2 px-4">
-                                <a href="https://www.linkedin.com/in/israelakintunde" class="nav-link interactive"
-                                    data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                    data-bs-title="Visit my Linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="https://www.linkedin.com/in/israelakintunde" class="nav-link interactive"><i class="fa-brands fa-linkedin-in"></i></a>
                             </li>
                             <li class="nav-item px-lg-2 px-4">
-                                <a href="https://dribbble.com/AI_Productions" class="nav-link interactive"
-                                    data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="My Dribble"><i
-                                        class="fa-solid fa-basketball"></i></a>
+                                <a href="https://dribbble.com/AI_Productions" class="nav-link interactive"><i class="fa-solid fa-basketball"></i></a>
                             </li>
                             <li class="nav-item px-lg-2 px-4">
-                                <a href="#" class="nav-link interactive" style="cursor: not-allowed;"
-                                    data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                    data-bs-title="Git Repo Coming Soon"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://github.com/AIProductionscode" class="nav-link interactive"><i class="fa-brands fa-github"></i></a>
                             </li>
 
                         </span>
@@ -169,11 +170,11 @@
 
             <!--Intro Section-->
             <section class="container intro-section">
-                <div class="row ">
+                <div class="row py-5">
                     <div class="col-lg-6 pt-4">
                         <!-- <p class="paragraph px-2" style="font-size: 12px;">Hi there 👋 , I’m</p> -->
                         <p class="paragraph px-2" style="font-size: 12px;">Hello 👋 , I’m</p>
-                        <p class="heading animate__animated animate__fadeInUp text-upper">Akintunde<br>Israel
+                        <p class="heading animate__animated animate__fadeInUp">Akintunde<br>Israel
                         </p>
                         <p class="sub-title animate__animated animate__fadeInUp animate__delay-1s">Creative Designer &
                             Front-End Developer<span style="color: var(--prycol);">.</span></p>
@@ -204,9 +205,9 @@
             </section>
 
             <!--About Section-->
-            <section class="about-section container py-5">
+            <section class="about-section container py-5" data-aos="fade-in">
 
-                <p class="sub-heading ">About Me.</p>
+                <p class="sub-heading">About Me.</p>
                 <p class="paragraph">I am a Creative Designer with over <b>5 years</b> experience, and i've been
                     building and
                     designing for the Web for over 2 years as well.
@@ -220,15 +221,15 @@
 
                 <!-- Design -->
                 <div class="row justify-content-center py-5 px-3">
-                    <div class="col-lg-6 px-lg-3">
-                        <p class="sub-heading">Design</p>
+                    <div class="col-lg-6 px-lg-3" data-aos="fade-right">
+                        <p class="sub-heading">Design <span><i class="fa-solid fa-pen-nib fa-xs"></i></span></p>
                         <p class="paragraph">I'm the creative force
                             your project deserves! I craft
                             innovative designs that are perfectly tailored to meet your unique needs. Let's collaborate
                             to turn your vision into a visually stunning reality!</p>
                     </div>
 
-                    <div class="col-lg-6 px-lg-3">
+                    <div class="col-lg-6 px-lg-3" data-aos="fade-left">
                         <div class=" mt-lg-5">
                             <p class="sub-title">My Design Tools & Skills<span style="color: var(--prycol);">.</span>
                             </p>
@@ -251,8 +252,8 @@
 
                 <!-- Development -->
                 <div class="row justify-content-center py-5 px-3">
-                    <div class="col-lg-6 px-lg-3">
-                        <p class="sub-heading">Development</p>
+                    <div class="col-lg-6 px-lg-3" data-aos="fade-right">
+                        <p class="sub-heading">Development <span><i class="fa-solid fa-code fa-xs"></i></span></p>
                         <p class="paragraph">I build amazing and functional websites for all your brand or organization
                             needs.
                             I can work seamlessly to bring you speedy and robust solutions, all geared towards optimal
@@ -260,7 +261,7 @@
                             scalability—making sure your priorities are my priorities!</p>
                     </div>
 
-                    <div class="col-lg-6 px-lg-3">
+                    <div class="col-lg-6 px-lg-3" data-aos="fade-left">
                         <div class=" mt-lg-5">
                             <p class="sub-title">My Software Development Toolkit<span
                                     style="color: var(--prycol);">.</span></p>
@@ -289,7 +290,7 @@
             </section>
 
             <!--Projects Completed-->
-            <section class="projects-completed">
+            <section class="projects-completed" data-aos="fade-in">
                 <div class="container-fluid">
                     <p class="heading-dark text-center pt-5 " style="font-size: 50px; text-align: center;">
                         PROJECTS COMPLETED </p>
@@ -325,13 +326,24 @@
 
             <!--Recent Work-->
             <section class="recent-work-section container py-5">
-                <p class="sub-heading text-center">Recent Projects</p>
+                <p class="sub-heading text-center py-3">My Recent Projects</p>
 
 
-                <div class="card-container row py-2">
+                <div class="portfolio-card-container">
 
-                    <div class="col-lg-4">
-                        <a href="http://" target="_blank" class="portfolio-link">
+                    <div class="card-box" data-aos="fade-up">
+                        <a href="http://www.aptechogbacenter.com/" target="_blank" class="portfolio-link">
+                            <div class="cardd" style="background-image: url(assets/aptech\ screenshot.png);">
+                                <div class="card-content">
+                                    <p class="card-title sub-title">Aptech Ogba</p>
+                                    <p class="card-body paragraph">Web Development</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="card-box" data-aos="fade-up" data-aos-delay="150">
+                        <a href="http://plantpalace.vercel.app" target="_blank" class="portfolio-link">
                             <div class="cardd" style="background-image: url(assets/plant-palance-preview.jpg);">
                                 <div class="card-content">
                                     <p class="card-title sub-title">Plant Palace</p>
@@ -341,18 +353,7 @@
                         </a>
                     </div>
 
-                    <div class="col-lg-4">
-                        <a href="http://" target="_blank" class="portfolio-link">
-                            <div class="cardd" style="background-image: url(assets/alberto-watches-preview.jpg);">
-                                <div class="card-content">
-                                    <p class="card-title sub-title">Alberto Watches</p>
-                                    <p class="card-body paragraph">Web Development</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-lg-4">
+                    <div class="card-box" data-aos="fade-up" data-aos-delay="300">
                         <a href="https://savannarelaxations.vercel.app/" target="_blank" class="portfolio-link">
                             <div class="cardd" style="background-image: url(assets/savanna-relaxations-preview.jpg);">
                                 <div class="card-content">
@@ -365,70 +366,17 @@
 
                 </div>
 
-                <!-- <div class=" px-5 portfolio">
-                <a href="https://savannarelaxations.vercel.app/" target="_blank" class="portfolio-link-card fadeIn">
-                    <div class="portfolio-content col-lg-4 col">
-                        <img src="assets/savanna-relaxations-preview.jpg" alt="Savanna Relaxations"
-                            class="p-2 portfolio-image img-fluid ">
+                <div class="text-center py-5" data-aos="fade-up" data-aos-delay="300">
+                    <a href="portfolio.html" class="btn-sec interactive">View More <span class="right-arrow"><i
+                                class="fa-solid fa-arrow-right"></i></span> </a>
+                </div>
 
-                        <div class="portfolio-card-body interactive pt-5">
-                            <p class="sub-heading text-center">Savanna Relaxations</p>
-                            <p class="paragraph text-center px-2">A website for a beach reservation company for
-                                vacations and holidays. Book beaches anywhere, anytime.</p>
-                            <p class="paragraph visit text-center">Visit Site <i class="fa-solid fa-arrow-right"></i>
-                            </p>
-                        </div>
-                    </div>
-                </a>
 
-                <a href="#" target="_blank" class="portfolio-link-card fadeIn">
-                    <div class="portfolio-content col-lg-4 col">
-                        <img src="assets/plant-palance-preview.jpg" alt="Plant Palace" class="p-2 portfolio-image img-fluid">
-
-                        <div class="portfolio-card-body interactive pt-5">
-                            <p class="sub-heading text-center">Plant Palace</p>
-                            <p class="paragraph text-center px-2">A website for a beach reservation company for
-                                vacations and holidays. Book beaches anywhere, anytime.</p>
-                            <p class="paragraph visit text-center">Visit Site <i class="fa-solid fa-arrow-right"></i>
-                            </p>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="#" target="_blank" class="portfolio-link-card fadeIn">
-                    <div class="portfolio-content col-lg-4 col">
-                        <img src="assets/alberto-watches-preview.jpg" alt="Alberto Watches" class="p-2 portfolio-image img-fluid">
-
-                        <div class="portfolio-card-body interactive pt-5">
-                            <p class="sub-heading text-center">Alberto Watches</p>
-                            <p class="paragraph text-center px-2">A website for a beach reservation company for
-                                vacations and holidays. Book beaches anywhere, anytime.</p>
-                            <p class="paragraph visit text-center">Visit Site <i class="fa-solid fa-arrow-right"></i>
-                            </p>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="#" target="_blank" class="portfolio-link-card fadeIn">
-                    <div class="portfolio-content col-lg-4 col">
-                        <img src="assets/puerlix-bank-preview.jpg" alt="Purelix Bank" class="p-2 portfolio-image img-fluid">
-
-                        <div class="portfolio-card-body interactive pt-5">
-                            <p class="sub-heading text-center">Purelix Bank</p>
-                            <p class="paragraph text-center px-2">A website for a beach reservation company for
-                                vacations and holidays. Book beaches anywhere, anytime.</p>
-                            <p class="paragraph visit text-center">Visit Site <i class="fa-solid fa-arrow-right"></i>
-                            </p>
-                        </div>
-                    </div>
-                </a>
-
-            </div> -->
             </section>
 
 
 
-            <section class="clients py-5">
+            <section class="clients">
                 <p class="sub-title text-center py-3">Top Brands I've Worked With</p>
                 <div class="scroller">
                     <div class="scroller-inner d-flex gap-4 justify-content-center tag-list ">
@@ -473,7 +421,7 @@
 
 
             <!--Customer Review Section-->
-            <section class="customer-reviews ">
+            <section class="customer-reviews py-5" data-aos="fade-in">
                 <div class="container py-5" id="featured-3">
                     <h1 class="sub-heading text-center">Testimonials</h1>
 
@@ -559,31 +507,6 @@
             </section>
 
 
-            <!-- <div class="toast-container position-fixed bottom-0 end-0 p-3">
-            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                <div class="toast-header">
-                    <img src="assets/AI Productions Logo Secondary.png" class="rounded me-2" alt="AI Productions"
-                        style="height: 30px;">
-                    <button type="button" class="btn-close interactive" data-bs-dismiss="toast" aria-label="Close"></button>
-                </div>
-                <div class="toast-body paragraph">
-                    Hello, there! Welcome to my website, pleased to have you here. 🤗👋
-                </div>
-            </div>
-        </div> -->
-            <!--Toast-->
-
-
-            <!-- <section class="project-section text-center">
-            <h1 class="heading c-p animate__animated animate__fadeInRight">CREATIVE PROJECTS</h1>
-            <div class="col-lg-6 mx-auto">
-                <p class="paragraph">Here's a collection of most of my work in <a href="#"
-                        style="color:#f9d801;">graphic design</a> and <a href="#" style="color:#f9d801;">Front-End
-                        Development</a> </p>
-            </div>
-        </section> -->
-
-
 
 
 
@@ -620,42 +543,74 @@
                         </div>
                     </div>
                 </div>
-            </section> -->
+            </section>
+    </div> -->
+
+    
+    <section class="footer p-5"  data-aos="fade-in">
+                <hr>
+                <div class="container py-5">
+                    <div class="text-center py-5">
+                        <img src="assets/Ai Productions Icon.png" alt="AI_Productions" class="img-fluid footer-icon">
+                    </div>
+                    <div class="footer-content d-lg-flex">
+                        <div>
+                            <p class="paragraph m-0">MAIL</p>
+                            <a href="" class="sub-title footer-paragraph">aiproductions.org@gmail.com</a>
+                        </div>
+                        <div>
+                            <p class="paragraph m-0">PHONE</p>
+                            <a href="" class="sub-title footer-paragraph">+234 814 636 3032</a>
+                        </div>
+                         <div class="social-links">
+                            <p class="paragraph m-0">SOCIALS</p>
+                            <div class="d-flex gap-5">
+                                <a href="https://www.instagram.com/aiproductionsdesign" class="interactive footer-socials"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/aiprodcutions" class="interactive footer-socials"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="https://www.linkedin.com/in/israelakintunde" class="interactive footer-socials"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="https://dribbble.com/AI_Productions" class="interactive footer-socials"><i class="fa-solid fa-basketball"></i></a>
+                                <a href="https://github.com/AIProductionscode" class="interactive footer-socials" disabled><i class="fa-brands fa-github"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </section>
+            <div class="py-3 text-center px-5">
+                <p class="paragraph m-0">Developed by Akintunde Israel</p>
+                <p class="paragraph m-0">© 2025 ai productions</p>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+            <!--?Web Content-->
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!--?Web Content-->
-    </div>
-
-    <!-- AOS -->
+    <!--AOS Animation js link-->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init();
+      AOS.init({
+        duration: 1000, // values from 0 to 3000, with step 50ms
+        easing: 'ease', // default easing for AOS animations
+        mirror: false, // whether elements should animate out while scrolling past them
+      });
     </script>
-
 
     <!-- Jquery CDN -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
-    <!-- waypoint cdn -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"
-        integrity="sha512-ZKNVEa7gi0Dz4Rq9jXcySgcPiK+5f01CqW+ZoKLLKr9VMXuCsw3RjWiv8ZpIOa0hxO79np7Ec8DDWALM0bDOaQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>

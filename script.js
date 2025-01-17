@@ -1,17 +1,20 @@
 
 $(document).ready(function () {
+
   $('.welcome').hide();
   $("#spinner").hide();
   $(".enter").hide();
 
   // $('.welcome').hide();
   // $("#spinner").hide();
-  // $(".web-content").hide();
+  // $("#spinner").fadeOut();
+
 
   // $('.enter').on('click', function () {
   //   enterButtonClick();
   // });
 
+  // // Trigger button with enter key
   // $(document).on('keypress', function (e) {
   //   if (e.which === 13) {
   //     enterButtonClick();
@@ -22,8 +25,6 @@ $(document).ready(function () {
   // function enterButtonClick() {
   //   $('.enter').fadeOut();
   //   $('.welcome').show();
-  //   // $('audio')[0].play();
-
     
   //   //Wait for 5s for opening theme to finish playing
   //   setTimeout(function () {
@@ -31,45 +32,31 @@ $(document).ready(function () {
   //   }, 5000);
   // }
 
-  //*For quick load
-  // $('.enter').hide();
-  // $('.bg-vid').hide();
-  // $("#spinner").hide();
-  // $('.welcome').hide();
-  // $('.animate__animated').removeClass('animate__animated');
+  // //Wait for 2s for opening theme to finish playing
+  // function showWebContent() {
 
-// Navbar scroll background control
-  // $(window).on('scroll', function() {
-  //   if ($(this).scrollTop() > 0) {
-  //     $('.navbar').addClass('scrolled');
-  //   } else {
-  //     $('.navbar').removeClass('scrolled');
-  //   }
-  // });
-  
+  //   //*Loading Animation
+  //   $("#spinner").fadeIn();
+    
+  //   //Spinner Fade of after 2s
+  //   setTimeout(function () {
+  //     $("#spinner").fadeOut();
 
-  //Wait for 5s for opening theme to finish playing
-  function showWebContent() {
-    //*Loading Animation
-    $("#spinner").fadeIn();
-    //Spinner Fade of after 2s
-    setTimeout(function () {
-      $("#spinner").fadeOut();
-    }, 2000);
-    $(".web-content").hide();
-    $(".glow-cursor").fadeOut();
-    $("body").css("overflow", "hidden");
+  //   }, 2000);
+
+  //   $("body").css("overflow", "hidden");
 
 
-    //Add a delay of 2000 milliseconds (2 seconds)
-    setTimeout(function () {
-      $(".web-content").show();
+  //   //Add a delay of 2000 milliseconds (2 seconds)
+  //   setTimeout(function () {
+  //     $(".bg-placeholder").fadeOut();
+  //     $('.web-content').removeClass('d-none'); 
      
-      $(".glow-cursor").fadeIn();
-      $("body").css("overflow", "auto");
-    }, 2000);
+  //     $(".glow-cursor").fadeIn();
+  //     $("body").css("overflow", "auto");
+  //   }, 2000);
 
-  }
+  // }
 
 
   //Infinite Logo Scrolling
@@ -93,31 +80,6 @@ $(document).ready(function () {
 
     })
   }
-
-
-  // //Animation on scroll
-  // $(".head1").waypoint(
-  //   function() {
-  //   //  $(".head1").addClass("animate__animated animate__fadeOutUp")
-  //   $(".head1").hide();
-  //   },
-  //   // {
-  //   //   offset: '10%'
-  //   // }
-  // )
-
-
-  //Navbar retract and expand
-  // var prevScrollpos = $(window).scrollTop();
-  // $(window).scroll(function () {
-  //   var currentScrollPos = $(window).scrollTop();
-  //   if (prevScrollpos > currentScrollPos) {
-  //     $(".navbar").css("top", "0");
-  //   } else {
-  //     $(".navbar").css("top", "-100px");
-  //   }
-  //   prevScrollpos = currentScrollPos;
-  // });
 
 
   //*Glow cursor
@@ -158,7 +120,7 @@ $(document).ready(function () {
     $(".projects-completed").waypoint(
       function () {
         const counters = document.querySelectorAll(".counter");
-        const speed = 1;
+        const speed = 3;
 
         counters.forEach(counter => {
           const updateCount = () => {
@@ -212,17 +174,6 @@ $(window).resize(function () {
 
 
 
-
-
-  //Toasts
-  document.addEventListener('DOMContentLoaded', function () {
-    const toastLiveExample = document.getElementById('liveToast');
-
-    if (toastLiveExample) {
-      const toastBootstrap = new bootstrap.Toast(toastLiveExample);
-      toastBootstrap.show();
-    }
-  });
 
 })//document ready
 
